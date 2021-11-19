@@ -1,0 +1,53 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block main-content %}
+<div class="container ">
+    <div class="row g-0 top-space-medium">
+        {% for news in technews_list %}
+
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mt-3 d-flex align-items-stretch">
+            <div class="card mt-4 mb-4 " style="width: 100%;">
+                <img class="card-img-top" src="{{news.image_url}}" alt="Card image cap">
+                <div class="card-body">
+                    <h6 class="card-title post-heading">{{news.title}}</h6>
+                    <p class="card-text post-body">{{news.content}}</p>
+
+                </div>
+                <div style="text-align: center;">
+                    <a href="#" class="btn btn-sm btn-outline-secondary mb-2">Read More...</a>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+    <div class="row mt-3">
+        <div class="mt-4 mb-4">
+            {% if technews_list.has_previous %}
+            <a href="?page=1">&laquo; First Page</a>
+            <a href="?page={{technews_list.previous_page_number}}">Previous</a>
+
+            {% endif %}
+            <!-- <p>Page {{technews_list.number}} of {{technews_list.paginator.num_pages}}</p> -->
+
+            {% if technews_list.has_next %}
+            <a href="?page={{technews_list.next_page_number}}">Next</a>
+            <a href="?page={{technews_list.paginator.num_pages}}">&raquo; Last Page</a>
+
+
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock main-content %}
+
+
+{% block js %}
+<script src="{% static 'my_app/js/myjs.js'%}"></script>
+
+{% endblock js %}

@@ -1,0 +1,36 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block main-content %}
+<div class="container top-space-large ">
+    <div class="row">
+        <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4 bg-light m-auto">
+            <form method="POST" class="p-4">
+                <p class="small text-capitalize">Enter your Registered Email Address and Password</p>
+                            {% csrf_token %}
+                          <div class="form-group " id="inputUsername">
+    
+                            {{ form|crispy }}
+                          </div>
+                    {% if messages %}
+                            {% for message in messages %}
+                        <div class="alert alert-{{message.tags }}">
+                            {{ message }}
+                        </div>
+                            {% endfor %}
+                            {% endif %}
+                    <button class="button-mini text-capitalize text-center mb-2 mt-4" type="submit">Login</button>
+                          <div class="text-center">
+                             
+                              <a class="small ml-1 mr-4" href="{% url 'signup' %}">Sign Up</a>
+                            <a class="small" href="#">Forgot password?</a></div>
+    
+                        </form>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock main-content %}

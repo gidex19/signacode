@@ -1,0 +1,33 @@
+<header class="header-img">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark  fixed-top collapse navbar-collapse">
+        <div class="logo-div"> <img class=" ml-0 logo" src="{% static 'my_app/images/signa_logo.png' %}"></div>
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link nav-anchor text-dark m-1 mr-2 " href="{% url 'homepage' %}">Home</a>
+                    <a class="nav-item nav-link nav-anchor text-dark m-1 mr-2 " href="{% url 'services' %}">Services</a>
+                    <a class="nav-item nav-link nav-anchor text-dark m-1 mr-2 " href="{% url 'technews' %}">TechNews</a>
+
+                    <a class="nav-item nav-link text-dark btn btn-outline-info m-1 ml-4 cbtn mr-3"
+                        href="{% url 'login' %}">Login</a>
+                    <a class="nav-item nav-link text-dark btn btn-outline-info m-1 ml-2 cbtn mr-3"
+                        href="{% url 'signup' %}">Sign Up</a>
+
+                    <!--
+                <a class="nav-item nav-link text-white btn btn-outline-info btn-sm m-1" href="#">Login</a>
+                <a class="nav-item nav-link text-white btn btn-outline-info btn-sm m-1" href="#">Sign Up</a>
+                -->
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block header-content %}
+
+    {% endblock %}
+
+</header>

@@ -1,0 +1,266 @@
+{
+    "status":"ok",
+    "totalResults":1723,
+    "articles":[
+       {
+          "source":{
+             "id":null,
+             "name":"ReadWrite"
+          },
+          "author":"Nate Nead",
+          "title":"How to Avoid Keyword Cannibalization",
+          "description":"Search engines are one of the most commonly used tech tools in the world, with the vast majority of the global internet-connected population conducting dozens of searches each day. That’s why so many business owners have turned to the power of search engines,…",
+          "url":"https://readwrite.com/2021/10/18/how-to-avoid-keyword-cannibalization/",
+          "urlToImage":"https://images.readwrite.com/wp-content/uploads/2021/10/keyword-cannibalization.jpg",
+          "publishedAt":"2021-10-19T01:13:33Z",
+          "content":"Search engines are one of the most commonly used tech tools in the world, with the vast majority of the global internet-connected population conducting dozens of searches each day. Thats why so many … [+8133 chars]"
+       },
+       {
+          "source":{
+             "id":"engadget",
+             "name":"Engadget"
+          },
+          "author":"Steve Dent",
+          "title":"Google's Pocket Gallery art museum experiences come to the web",
+          "description":"Google's Pocket Gallery came along in 2018, allowing users with AR-enabled smartphones to see artworks by the likes of Vermeer and Klimt, even pieces normally not accessible to the public. Now, Google is opening up the exhibitions to everyone on the web, lett…",
+          "url":"https://www.engadget.com/googles-pocket-gallery-art-museum-experiences-come-to-the-web-103411365.html",
+          "urlToImage":"https://s.yimg.com/os/creatr-uploaded-images/2021-10/3f5cd4a0-2cd4-11ec-9d3f-4a8ddddd5a25",
+          "publishedAt":"2021-10-14T10:34:11Z",
+          "content":"Google's Pocket Gallery came along in 2018, allowing users with AR-enabled smartphones to see artworks by the likes of Vermeer and Klimt, even pieces normally not accessible to the public. Now, Googl… [+1393 chars]"
+       },
+       {
+          "source":{
+             "id":"engadget",
+             "name":"Engadget"
+          },
+          "author":"Kris Holt",
+          "title":"Meta details its latest efforts to combat climate change as COP26 starts",
+          "description":"Meta (Facebook's parent company\r\n) has joined other major tech companies in making more climate change pledges\r\n as the UN’s COP26 summit commences. Along with taking measures to reduce its own carbon footprint, Meta is focused on \"helping people find accurat…",
+          "url":"https://www.engadget.com/meta-facebook-climate-change-000051729.html",
+          "urlToImage":"https://s.yimg.com/os/creatr-uploaded-images/2021-10/6bfafb50-3b47-11ec-8bed-bf2e27c6e69c",
+          "publishedAt":"2021-11-02T00:00:51Z",
+          "content":"Meta (Facebook's parent company\r\n) has joined other major tech companies in making more climate change pledges\r\n as the UNs COP26 summit commences. Along with taking measures to reduce its own carbon… [+2567 chars]"
+       },
+       {
+          "source":{
+             "id":"business-insider",
+             "name":"Business Insider"
+          },
+          "author":"insider@insider.com (Lauren Frias)",
+          "title":"'Squid Game' keyword searches are reportedly yielding no results on major e-commerce platforms in China",
+          "description":"The popular Korean dystopian survival drama has not been officially released in China due to the nation's strict content licensing rules.",
+          "url":"https://www.businessinsider.com/no-results-for-squid-game-chinese-e-commerce-platforms-report-2021-10",
+          "urlToImage":"https://i.insider.com/6178a25ce100ad00181dd9c0?width=1200&format=jpeg",
+          "publishedAt":"2021-10-27T01:31:38Z",
+          "content":"\"Squid Game\" keyword searches on major online shopping platforms in China are yielding no results, the South China Morning Post reported Tuesday.\r\nMajor Chinese e-commerce platforms Alibaba, Pinduodu… [+1757 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"ReadWrite"
+          },
+          "author":"Timothy Carter",
+          "title":"How to Choose the Right Keywords for Your SEO Campaign",
+          "description":"With the help of a solid search engine optimization (SEO) strategy, you can optimize your website to rank higher in search engines for relevant user searches. In time, that means your website will attract more visitors, earn more attention, and generate more …",
+          "url":"https://readwrite.com/2021/11/09/how-to-choose-the-right-keywords-for-your-seo-campaign/",
+          "urlToImage":"https://images.readwrite.com/wp-content/uploads/2021/11/Keywords-for-Your-SEO-Campaign.jpg",
+          "publishedAt":"2021-11-09T17:26:17Z",
+          "content":"With the help of a solid search engine optimization (SEO) strategy, you can optimize your website to rank higher in search engines for relevant user searches. In time, that means your website will at… [+7813 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Gizmodo.com"
+          },
+          "author":"Germain Lussier",
+          "title":"A Quiet Place Horror Video Game Is in the Works",
+          "description":"Through two movies in the Quiet Place universe, fans have basically only seen the story of one family. But the invasion by deadly aliens who are hypersensitive to sound is, we imagine, happening all over the world. That means there are an infinite amount of s…",
+          "url":"https://gizmodo.com/a-quiet-place-horror-video-game-is-in-the-works-1847936667",
+          "urlToImage":"https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/e91b2d40b84563ca90879c00a629240c.jpg",
+          "publishedAt":"2021-10-26T16:40:00Z",
+          "content":"Through two movies in the Quiet Place universe, fans have basically only seen the story of one family. But the invasion by deadly aliens who are hypersensitive to sound is, we imagine, happening all … [+1772 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Moz.com"
+          },
+          "author":"Tom Capper",
+          "title":"Links and Brand as Ranking Factors: 2021 Correlation Study",
+          "description":"Do links or brand authority truly correlate with ranking on the SERPs? This study of the first 20 organic results for every MozCast keyword suggests that yes, they do, but with some important considerations.",
+          "url":"https://moz.com/blog/2021-links-ranking-correlation-study",
+          "urlToImage":"https://moz.com/images/cms/Tom-correlation-OG-Max-Quality.jpg?w=1200&h=630&q=82&auto=format&fit=clip&dm=1636320525&s=6ae20e208cd4d02b329367b009457a67",
+          "publishedAt":"2021-11-08T08:00:00Z",
+          "content":"The author's views are entirely his or her own (excluding the unlikely event of hypnosis) and may not always reflect the views of Moz.Its been a long time since Moz last published an in-house ranking… [+7484 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Boing Boing"
+          },
+          "author":"Jason Weisberger",
+          "title":"Fake Apple event stream on YouTube actually a crypto scam",
+          "description":"I wish someone would find a use for crypto other than scams already.\n\n\n\n9to5 Mac:\n\n\n\nThe YouTube stream has somehow drawn up to 30,000 concurrent viewers. It helps that the YouTube search algorithm is heavily promoting it, thanks to a title that includes the …",
+          "url":"https://boingboing.net/2021/10/18/fake-apple-event-stream-on-youtube-actually-a-crypto-scam.html",
+          "urlToImage":"https://i2.wp.com/boingboing.net/wp-content/uploads/2021/10/0-91-39.jpeg?fit=480%2C360&ssl=1",
+          "publishedAt":"2021-10-18T17:41:44Z",
+          "content":"I wish someone would find a use for crypto other than scams already.The YouTube stream has somehow drawn up to 30,000 concurrent viewers. It helps that the YouTube search algorithm is heavily promoti… [+409 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Entrepreneur"
+          },
+          "author":"Bhavik Sarkhedi",
+          "title":"The Step-by-Step Guide to Creating and Publishing Quality Content",
+          "description":"Your job of creating quality content doesn't end until you publish and promote it efficiently.",
+          "url":"https://www.entrepreneur.com/article/384391",
+          "urlToImage":"https://assets.entrepreneur.com/content/3x2/2000/1633978536-GettyImages-1069359444.jpg",
+          "publishedAt":"2021-10-14T20:45:00Z",
+          "content":"If you're one of the several internet marketers or businesses looking for an answer to creating high-quality content that will draw readers and earn you top rankings in the search engines, you have r… [+4557 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Search Engine Journal"
+          },
+          "author":"Rachel Vandernick",
+          "title":"10 Uniquely Enterprise SEO Keyword Research Tips via @sejournal, @vandernickr",
+          "description":"Traditional SEO tactics don’t always work for enterprise sites. Here are 10 keyword research tips for your enterprise-level SEO strategy.The post 10 Uniquely Enterprise SEO Keyword Research Tips appeared first on Search Engine Journal.",
+          "url":"https://www.searchenginejournal.com/?p=422726",
+          "urlToImage":"https://cdn.searchenginejournal.com/wp-content/uploads/2021/10/10-uniquely-enterprise-seo-keyword-research-tips-6165878557647-sej.png",
+          "publishedAt":"2021-10-14T13:45:47Z",
+          "content":"When it comes to SEO, all things are not created equal.\r\nWhat defines your business as “enterprise” typically comes down to the size of your organization, your total annual revenue, or the number of … [+8539 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Hubspot.com"
+          },
+          "author":"hkrijestorac@hubspot.com (Haris Krijestorac)",
+          "title":"16 Top Website Mistakes to Avoid in 2021 [+ 16 Easy Fixes]",
+          "description":"Building a new website is a daunting task, and you can make some of these common mistakes if you're not careful. Here's exactly how to fix them.",
+          "url":"https://blog.hubspot.com/blog/tabid/6307/bid/6121/10-common-website-mistakes-and-how-to-fix-them.aspx#article",
+          "urlToImage":"https://blog.hubspot.com/hubfs/Copy%20of%20Untitled-Oct-14-2021-05-03-05-57-PM.png#keepProtocol",
+          "publishedAt":"2021-10-28T18:00:00Z",
+          "content":"Since 86% of consumers rely on the internet to find local businesses, having a website is a no-brainer regardless of your business type.\r\nAlthough building a website is great for business, you'll wan… [+15026 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Hubspot.com"
+          },
+          "author":"Doug Bonderud",
+          "title":"How to Outsource SEO Correctly & Avoid the 5 Most Common Mistakes",
+          "description":"If you want to grow your business, great search engine optimization (SEO) is a must: Recent survey data found that 53 percent of all trackable website traffic originated from organic search, which means that if you want to get noticed, you need to show up at …",
+          "url":"https://blog.hubspot.com/blog/tabid/6307/bid/4202/why-you-can-t-fully-outsource-seo.aspx#article",
+          "urlToImage":"https://blog.hubspot.com/hubfs/how-to-outsource-seo.jpeg#keepProtocol",
+          "publishedAt":"2021-11-05T11:00:00Z",
+          "content":"If you want to grow your business, great search engine optimization (SEO) is a must: Recent survey data found that 53 percent of all trackable website traffic originated from organic search, which me… [+10187 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Entrepreneur"
+          },
+          "author":"Entrepreneur Store",
+          "title":"How to Launch an E-Commerce Brand",
+          "description":"Start a Shopify side hustle or primary business fast.",
+          "url":"https://www.entrepreneur.com/article/394361",
+          "urlToImage":"https://assets.entrepreneur.com/content/3x2/2000/1635533003-ent-shopifysidehustles.jpg",
+          "publishedAt":"2021-11-01T12:30:00Z",
+          "content":"E-commerce experienced a massive boom over the past year. As social distancing requirements forced many businesses to take their operations online, shoppers quickly discovered that the online shoppin… [+1737 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Search Engine Journal"
+          },
+          "author":"Chris Long",
+          "title":"Keyword Segmentation: Find Which Product Categories Rank Best via @sejournal, @gofishchris",
+          "description":"Using keyword segmentation to see pages may rank well gives insight that can guide you in where to invest your SEO and content resources.The post Keyword Segmentation: Find Which Product Categories Rank Best appeared first on Search Engine Journal.",
+          "url":"https://www.searchenginejournal.com/?p=422603",
+          "urlToImage":"https://cdn.searchenginejournal.com/wp-content/uploads/2021/10/which-of-your-product-categories-are-most-likely-to-rank_-61692ba0c8a0a-sej.png",
+          "publishedAt":"2021-10-22T13:45:00Z",
+          "content":"We know that in search, not all things are created equal.\r\nNot every tactic will yield the same results.\r\nNot every link has the same value.\r\nNot every keyword you rank for is valuable.\r\nWe tend to s… [+9614 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Blog.google"
+          },
+          "author":"Nana Wereko-BrobbyEditorial Lead EMEAComms Lab",
+          "title":"Meet the Googler championing startups in Africa",
+          "description":"Onajite Emerhor sits in her living room in Lagos, Nigeria, where she has been working since the start of the pandemic. “I did my hair and makeup myself this time,” she jokes, as she sits down with The Keyword for an interview about the blossoming startup scen…",
+          "url":"https://blog.google/around-the-globe/google-africa/meet-googler-championing-startups-africa/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+blogspot%2FMKuf+%28The+Keyword+%7C+Official+Google+Blog%29",
+          "urlToImage":"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Screenshot_2021-10-13_9.15.16_AM.max-1300x1300.png",
+          "publishedAt":"2021-10-13T11:00:00Z",
+          "content":"Onajite Emerhor sits in her living room in Lagos, Nigeria, where she has been working since the start of the pandemic. I did my hair and makeup myself this time, she jokes, as she sits down with The … [+2343 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Android Central"
+          },
+          "author":"Jay Bonggolto",
+          "title":"YouTube doubles down on accessibility with these caption and audio features",
+          "description":"The new and upcoming features are meant to make the platform \"more inclusive and accessible.\"\n\nWhat you need to know\n\n\nYouTube has announced a bunch of new caption and audio capabilities meant to improve its accessibility.\nThe platform's live auto captions fe…",
+          "url":"https://www.androidcentral.com/youtube-accessibility-features-live-auto-caption-and-audio",
+          "urlToImage":"https://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2021/05/youtube-lifestyle-01.jpg",
+          "publishedAt":"2021-10-10T05:02:44Z",
+          "content":"YouTube has lifted previous limitations to its accessibility features for live streams with new improvements for its caption and audio capabilities, along with more features meant to make content mor… [+2163 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"CNET"
+          },
+          "author":"Katie Collins",
+          "title":"Facebook steps up climate crisis misinformation detection during COP26 - CNET",
+          "description":"The social media company is also expanding its Climate Science Information Center to make it easier for people to get accurate scientific information about the climate crisis.",
+          "url":"https://www.cnet.com/tech/services-and-software/facebook-steps-up-climate-crisis-misinformation-detection-during-cop26/",
+          "urlToImage":"https://www.cnet.com/a/img/ZcPBRo3mUTdntnjljIYu7afE2uU=/1200x630/2021/10/31/ced303f9-c1ad-4035-8a2e-93375825f1bc/gettyimages-170377205.jpg",
+          "publishedAt":"2021-11-02T00:00:03Z",
+          "content":"Facebook reached its net zero emissions target in 2020.\r\nSimon Dawson/Bloomberg via Getty Images\r\nWith COP26 kicking off this week in Glasgow, Scotland, big tech companies are taking a moment to refl… [+2229 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Hubspot.com"
+          },
+          "author":"bhalligan@hubspot.com (Brian Halligan)",
+          "title":"You Don't Have to Be a Great Writer to Write a Great Blog",
+          "description":"I'm an engineer who had very little writing experience until I started HubSpot.  Here's proof that you don't need to be a great writer to start a great blog.",
+          "url":"https://blog.hubspot.com/blog/tabid/6307/bid/5289/you-don-t-have-to-be-a-great-writer-to-write-a-great-blog.aspx#article",
+          "urlToImage":"https://blog.hubspot.com/hubfs/Copy%20of%20Untitled-Oct-12-2021-03-46-25-27-AM.png#keepProtocol",
+          "publishedAt":"2021-10-28T18:00:00Z",
+          "content":"When I started HubSpot, I was a trained engineer with little writing experience. In the early days of the company, I could not create software. Instead, I spent a lot of time writing articles for our… [+9405 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Entrepreneur"
+          },
+          "author":"Tiffany Gaines",
+          "title":"5 Easy Social-Optimization Tips to Reinvigorate Your Company's Ad Campaign",
+          "description":"Optimize your company's social strategy to see results.",
+          "url":"https://www.entrepreneur.com/article/390257",
+          "urlToImage":"https://assets.entrepreneur.com/content/3x2/2000/1634059137-shutterstock-1906238173.jpg",
+          "publishedAt":"2021-10-15T13:30:00Z",
+          "content":"In todays digital era, social media has become one of the most important marketing tools in a companys business-growth strategy. It's so common it seems nearly taboo if youre a business owner and you… [+4203 chars]"
+       },
+       {
+          "source":{
+             "id":null,
+             "name":"Business Wire"
+          },
+          "author":"",
+          "title":"During Breast Cancer Awareness Month, Bayer Shines a Light on the Impact of Breast Density on Breast Cancer Risk - Manchestertimes",
+          "description":"<ol><li>During Breast Cancer Awareness Month, Bayer Shines a Light on the Impact of Breast Density on Breast Cancer Risk  Manchestertimes\r\n</li><li>'Simpsons' unveil new character who is a breast cancer survivor and fans love it  Yahoo Canada Shine On\r\n</li><…",
+          "url":"https://www.businesswire.com/news/home/20211025005739/en/",
+          "urlToImage":"https://bloximages.newyork1.vip.townnews.com/manchestertimes.com/content/tncms/custom/image/3fe49e04-4339-11e8-8636-b3accfd19e22.jpg",
+          "publishedAt":"2021-10-25T19:01:52Z",
+          "content":"WHIPPANY, N.J.--(BUSINESS WIRE)--Oct 25, 2021--\r\nNearly half of all women aged 40 and over who have mammograms are told they have dense breasts. 1 Yet, many women dont know that having dense breasts … [+4489 chars]"
+       }
+    ]
+ }

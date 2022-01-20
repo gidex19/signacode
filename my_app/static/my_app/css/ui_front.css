@@ -1,0 +1,1185 @@
+
+:root{
+
+
+    --navcolor: #072F5F;
+    --purpletext: white;
+    /* --background: #1D2951; */
+    --background: #111111;
+    --cardtext: white;
+    --darktext: white;
+    --whitetext: black;
+    --postbg: #333333;
+    --gradient1: #333333;
+    --gradient2: #147cac;
+    --fadeblack: #333333;
+
+
+}
+
+.light-theme{
+    --navcolor: black;
+    --purpletext: rgb(71, 9, 71);
+    --background: white;
+    --cardtext: black;
+    --darktext: black;
+    --whitetext: white;
+    --postbg: whitesmoke;
+    --gradient1: #701b8ac0;
+    --gradient2: #147cac;
+    --fadeblack: lightgrey;
+}
+.dark-theme{
+    --navcolor: #072F5F;
+    --purpletext: white;
+    /* --background: #1D2951; */
+    --background: #111111;
+    --cardtext: white;
+    --darktext: white;
+    --whitetext: black;
+    --postbg: #333333;
+    --gradient1: #333333;
+    --gradient2: #147cac;
+    --fadeblack: #333333;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--background);
+}
+
+.header-img{
+    /* background-image: linear-gradient(to right, #5bc0de, #0275db); */
+    /* background-image: linear-gradient(to right , #701b8ac0, #147cac); */
+    background-color: var(--background);
+    /* background-image: url("test.jpg"); */
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-bottom: 1px solid black; */
+}
+
+
+/* css for learn js page */
+.vidcard{
+    width: 90%; height: 70%;
+}
+.sidecard{
+    background-color:  var(--fadeblack) !important;
+    margin-top: 6px;
+    border-radius: 10px;
+}
+.fadeblack-bg{
+    background-color:  var(--fadeblack) !important;
+}
+.vidcard :hover{
+    /* cursor: pointer; */
+    text-decoration: none;
+}
+.course-anchor{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 
+.fa-star:hover{
+    color: white;
+} */
+.checked{
+    color: orange;
+}
+
+/* css learn page ends here */
+
+
+.alert .alert-info p{
+    background-color: black !important;
+    color: black !important;
+}
+
+
+/* css for profile page starts here */
+* {
+    margin: 0;
+    padding: 0
+}
+
+.profile-card {
+    width: 350px;
+    background-color: #efefef;
+    border: none;
+    /* cursor: pointer; */
+    transition: all 0.5s
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.profile-card:hover .image img {
+    transform: scale(1.5)
+}
+
+.at-btn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--darktext) !important;
+    text-decoration: none;
+    border: none;
+}
+
+.idd {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--darktext) !important;
+}
+
+.idd1 {
+    font-size: 14px;
+    color: var(--darktext) !important;
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--darktext) !important;
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px
+}
+
+.text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500
+}
+
+.icons i {
+    font-size: 19px
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    color:black;
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}
+
+
+/* css for profile page ends here */
+
+/* css for the test page */
+
+#select{
+    margin-bottom: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 9px;
+    outline-style: none;
+
+}
+.options{
+    padding: 30px;
+}
+.inline{
+    display: inline;
+}
+.content{
+
+    width: 100%;
+    margin: auto;
+
+}
+
+
+.prev{
+    float: left;
+    margin-left: 40px;
+    margin-right: 4px;
+}
+.next{
+    float: right;
+    margin-right: 40px;
+    margin-left: 4px;
+}
+
+#infobtn, #submit, #timebtn{
+    float: right;
+    margin: 2px;
+}
+
+#navqstns{
+    display: inline;
+    margin-top: 10px;
+}
+
+.main-div{
+    display: grid;
+}
+.content-result, .correction-div{
+    margin: auto;
+    width: 100%;
+}
+#resultdiv{
+    margin-top: auto;
+    margin: auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    padding: 20px;
+    border-radius: 13px;
+    text-align: center;
+}
+.choosen{
+    background-color: lightcoral;
+    font-size: x-large;
+    color: white;
+}
+.content{
+
+    width: 100%;
+    margin: auto;
+
+}
+
+
+/* css for test page ends here */
+
+/* latest css here */
+.header{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: linear-gradient(to right , rgba(115, 179, 199, 0.7), rgba(70, 189, 173, 0.8)); */
+}
+.bg-img{
+    object-fit: cover; 
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+}
+.header-row{
+    width: 100vw;
+    height: 100vh;
+}
+.right-header-div{
+    margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.left-header-div{
+    margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.prerequisite-div{
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+.header-row-text-div{
+    margin-top: 150px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.header-row-img-div{
+    margin-top: 100px; padding-top: 5%; padding-bottom: 5%; padding-right: 2%; padding-left: 2%;
+}
+.course-images{
+    width: 100%; height: 100%; object-fit: contain; border-radius: 15px;
+}
+.space-div{
+    margin-top: 100px;       
+}
+.full-width-div{
+    padding-top: 100px; padding-bottom: 100px;
+}
+.hero-section{
+
+    margin-top: -50vh;
+    margin-left: 7%;
+    z-index: 5;
+
+}
+.header-text{
+    font-weight: bolder; 
+    font-weight: bolder; 
+    color:var(--darktext);
+    font-size: 3rem;
+}
+.button-p-white{
+    padding: 20px 40px;
+    border: 3px solid cornflowerblue;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+.button-p-dark{
+    padding: 20px 40px;
+    border: 3px solid rgb(81, 130, 221);
+    background-color: cornflowerblue;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.button-p-dark:hover, .button-p-white:hover{
+    text-decoration: none;
+}
+.modal-button{
+    padding: 10px 20px;
+    border: 2px solid rgb(81, 130, 221);
+    background-color: cornflowerblue;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.sub-head{
+    font-size: 18px;
+    font-weight: bolder !important ;
+    color: var(--purpletext) !important;
+}
+.darktext{
+    color: var(--darktext) ;
+}
+
+.custom-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .disc-ul {
+    list-style-type: disc !important;
+    padding-left: 1em !important;
+    margin-left: 1em;
+  }
+  .tab-ul{
+      list-style-type: none !important;
+  }
+  
+  .course-title{
+    font-size: 13px;
+    font-weight: bolder;
+  }
+
+  
+    label{
+        color: var(--darktext) !important;
+        /* color: white; */
+    }
+    .interest-container{
+        background-image: url("darkbg.jpg") !important;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+
+/* latest ends here */
+
+
+
+nav{
+    height:90px;
+    background-image: white;
+    border-bottom: 1px solid var(--purpletext);
+    background-color: var(--background);
+    /* background-image: linear-gradient(to right, #000000, #202020); */
+    /* /* background-color: white; */
+}
+.nav-item{
+    color: var(--darktext) !important;
+}
+.main-nav-item{
+    background-color: var(--background);
+}
+a{
+    color: var(--darktext);
+}
+.cbtn{
+    border-color: black;
+}
+.logo, .logo2{
+    width: 70%;
+    height: 70%;
+}
+.div-bg{
+    margin-top: 17em;
+    /*background-color: rgb(255, 230, 0); */
+    /* top: -40px; */
+    animation-name: div-slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes div-slide{
+    0%{ opacity: 0; transform: translateX(50%);}
+    100%{ opacity: 1; transform: translateX(0%);}
+}
+
+.img{
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img-div2{
+    background-image: url("code-test.jpg");
+}
+.head-text{
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--purpletext);
+}
+.med-text{
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--darktext);
+    
+}
+.img img {
+    width: 100%;
+    margin-top: 10em;
+}
+.svg-img{
+     width: 90%;
+     height: 90%;   
+     margin-top: 40px;
+     margin-left: 20px;
+     margin-right: auto;
+}
+.svg-div{
+    width: 80%;
+    height: 80%;
+    animation-name: svg-slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+}
+/* css toggle starts here  */
+.switch {
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .switch div {
+    position: relative;
+    display: block;
+    background: #eee;
+    width: 30px;
+    border-radius: 50px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .fa-adjust {
+    transform: rotate(180deg);
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    background-color: #999;
+    transition: 0.4s;
+    border-radius: 34px;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    position: relative;
+  }
+  input:checked + .slider {
+    transform: translateX(8px);
+  }
+
+/* ends here */
+@keyframes svg-slide{
+    0%{ opacity: 0; transform: translateY(80%);}
+    20%{ opacity: 0; transform: translateY(80%);}
+    100%{ opacity: 1; transform: translateY(0%);}
+}
+
+.icon{
+    width: 100%;
+}
+.icon img {
+    width: 100%;
+}
+.icon-div{
+    border: 1px solid var(--purpletext);
+    border-radius: 8px;
+}
+.g-icon{
+    font-size: 60px;
+    color: var(--purpletext); 
+    text-align: center;
+    /* background: linear-gradient(to right, #147cac, #701b8ac0); */
+
+}
+.purple-text{
+    color: var(--purpletext)
+}
+.light-bg{
+    background-color: var(--postbg);
+}
+.white-bg{
+    background-color: var(--background);
+}
+.button{
+    
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    color:var(--darktext);
+    padding-right: 13px;
+    padding-left: 13px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 1px solid var(--purpletext);
+    text-decoration: none;
+    border-radius: 4px;
+    
+}
+
+
+/* css code for the login page starts here*/
+.button-mini{
+    
+    width: 100px;
+    height: 50px;
+    background: var(--postbg);
+    /* color:rgb(71, 9, 71); */
+    color:var(--purpletext);
+    padding-right: 13px;
+    padding-left: 13px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid var(--purpletext);
+    text-align: center;
+    text-decoration: none;
+}
+.button-normal{
+    
+}
+.large-bold{
+    font-size: 35px;
+    color: var(--purpletext);
+    font-weight: 900;
+}
+.button-mini:hover, .button:hover{
+    color: var(--whitetext);
+    background-color: var(--purpletext);
+    text-decoration: none;    
+}
+.small-purple{
+    font-size: 11px;
+    font-weight: 900;
+    color: var();
+}
+
+.form-div{
+    text-align: center;
+    background-image: linear-gradient(to right, #147cac, #701b8ac0);
+}
+.top-space-large{
+    margin-top: 180px;
+    
+}
+.top-space-medium{
+    margin-top: 150px;
+}
+#inputemail, #inputpassword, #inputfullname, #inputphonenumber{
+    padding: 10px;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 2px solid rgb(71, 9, 71);
+    
+}
+
+/* css code for the login page ends here */
+
+.latest-articles{
+    /*background-color: red; */
+}
+.p-heading{
+    padding: 4px;
+    font-size: 18px;
+    font-weight: bolder;
+    color:var(--darktext);
+    border-bottom: 4px solid var(--darktext);
+}
+.articles-div{
+    background-color: var(--postbg);
+}
+.post-image-div{
+    width: 400px;
+    height: 200px;
+
+}
+.post-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.post-heading{
+    font-weight: bolder;
+    text-transform: capitalize;
+    color: var(--darktext) !important;
+}
+.card{
+    background-color: var(--postbg) !important;
+    
+}
+
+.post-body, p, li{
+    font-size: 15px;
+    color: var(--darktext) !important;
+}
+.post-body p{
+    font-size: 15px;
+    color: white !important;
+}
+h3{
+    color: var(--darktext);
+}
+
+.white{
+    color: white !important;
+}
+/* profile css styling starts here */
+.profile-container{
+    
+}
+.profile-div{
+    margin-top: 10%;
+    justify-content: center;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-left: 2px solid rgb(71, 9, 71);
+}
+.user-image{
+    text-align: center;
+}
+.profile-body{
+    text-align: center;
+    width: 70%;
+    /* background-color: red; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+.profile-text{
+    font-size: 15px;
+    font-weight: bold;
+}
+.p-purple{
+    font-size: 15px;
+    color:white;
+    font-weight: 900;
+    text-align: center;
+}
+/* profile css styling ends here */
+
+.card{
+    /* border-top: 1px solid purple; */
+    border-radius: 12px;
+}
+.card-img-top{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+/* footer css starts here */
+.footer{
+    margin-top: 30px;
+    /* background-image: linear-gradient(to right , #701b8ac0, #147cac); */
+    background-image: linear-gradient(to right , var(--gradient1) , var(--gradient2));
+}
+.linear{
+    /* background-image: linear-gradient(to right , #701b8ac0, #147cac); */
+    background-image: linear-gradient(to right , var(--gradient1) , var(--gradient2));
+}
+.container-footer{
+    padding: 40px;
+
+}
+.footer-heading{
+    font-size: 23px;
+    color: white !important;
+    font-weight: bolder;
+}
+.footer-text{
+    font-size: 13px;
+    color: white !important;
+    font-weight: 500;
+}
+.anchor-block{
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.icon{
+    width: 15%;
+    height: 15%;
+    text-align: center;
+}
+
+
+/* foorter css ends here  */
+@media all and (max-width: 380px){
+    .button-p-white{
+        padding: 6px 12px;
+        border: 2px solid cornflowerblue;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+
+    }
+    .button-p-dark{
+        padding: 6px 12px;
+        border: 2px solid rgb(81, 130, 221);
+        background-color: cornflowerblue;
+        text-decoration: none;
+        color: white;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;    
+    }
+    .header-row-img-div{
+        margin-top: -30px; padding-top: 2%; padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
+    }
+    .space-div{
+        margin-top: 150px;
+    }
+    .course-images{
+        width: 85%;
+        height: 85%;
+        border-radius: 15px;
+    }
+     .collage-grid-dark{
+        width: 100%;
+        height: 100%;
+    }
+    .header-text{
+        font-weight: bolder; 
+        font-weight: bolder; 
+        color:var(--darktext);
+        font-size: 2.3rem;
+    }
+    .full-width-div{
+        padding-top: 60px; padding-bottom: 40px;
+    }
+    /*
+    .header-row-text-div{
+        margin-top: 150px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .header-row-img-div{
+        margin-top: 100px; padding-top: 5%; padding-bottom: 5%; padding-right: 2%; padding-left: 2%;
+    } */
+
+
+    /* ends here */
+    
+    .logo-div{
+        margin-top: -40px;
+        /* background-color: green; */
+    }
+    .logo-div img{
+        width: 40%;
+        height: 20%;
+        margin-left: 2px;
+    }
+    .navbar-toggler{
+        float: right; 
+        margin-top: 50px;
+    }
+    .div-bg{
+        margin-top: 10em;
+    }
+    .head-text{
+        font-size: 4rem;
+    }
+    .svg-div .img{   
+        margin-top: -100px;
+        margin-left: 10px;
+        margin-right: auto;
+   }
+   .main-nav-item{
+       margin-top: -20px;
+   }
+   .large-bold{
+    font-size: 28px;
+    font-weight: 900;
+}
+.small-purple{
+    font-size: 10px;
+    
+}
+.top-space-medium{
+    margin-top: 120px;
+}
+.card-img-top{
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+}
+.vidcard{
+    width: 90%; height: 70%;
+    margin: auto;
+}
+.vidcard-img{
+    display: none;
+}
+.right-header-div{
+    
+    margin-top: -10px; padding-top: 5%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.left-header-div{
+    /* background-color: cornflowerblue; */
+    margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.prerequisite-div{
+    margin-top: 400px;
+    margin-bottom: 40px;
+}
+
+}
+
+
+@media (min-width:381px) and (max-width: 500px) {
+    /* new css here */
+    .button-p-white{
+        padding: 10px 20px;
+        border: 2px solid cornflowerblue;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;
+
+    }
+    .button-p-dark{
+        padding: 10px 20px;
+        border: 3px solid rgb(81, 130, 221);
+        background-color: cornflowerblue;
+        text-decoration: none;
+        color: white;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;    
+    }
+    .button-p-dark:hover, .button-p-white:hover{
+        text-decoration: none;
+    }
+    .header-row-img-div{
+        margin-top: -30px; padding-top: 2%; padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
+    }
+    .space-div{
+        margin-top: 150px;
+    }
+    .course-images{
+        width: 85%;
+        height: 85%;
+        border-radius: 15px;
+    }
+     .collage-grid-dark{
+        width: 100%;
+        height: 100%;
+    }
+    .header-text{
+        font-weight: bolder; 
+        font-weight: bolder; 
+        color:var(--darktext);
+        font-size: 2.3rem;
+    }
+    .full-width-div{
+        padding-top: 60px; padding-bottom: 40px;
+    }
+    /*
+    .header-row-text-div{
+        margin-top: 150px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .header-row-img-div{
+        margin-top: 100px; padding-top: 5%; padding-bottom: 5%; padding-right: 2%; padding-left: 2%;
+    } */
+
+
+    /* ends here */
+    
+    .logo-div{
+        margin-top: -40px;
+        /* background-color: green; */
+    }
+    .logo-div img{
+        width: 40%;
+        height: 20%;
+        margin-left: 2px;
+    }
+    .navbar-toggler{
+        float: right; 
+        margin-top: 50px;
+    }
+    .div-bg{
+        margin-top: 10em;
+    }
+    .head-text{
+        font-size: 4rem;
+    }
+    .svg-div .img{   
+        margin-top: -100px;
+        margin-left: 10px;
+        margin-right: auto;
+   }
+   .main-nav-item{
+       margin-top: -20px;
+   }
+   .large-bold{
+    font-size: 28px;
+    font-weight: 900;
+}
+.small-purple{
+    font-size: 10px;
+    
+}
+.top-space-medium{
+    margin-top: 120px;
+}
+.card-img-top{
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+}
+.vidcard{
+    width: 90%; height: 70%;
+    margin: auto;
+}
+.vidcard-img{
+    display: none;
+}
+.right-header-div{
+    
+    margin-top: -10px; padding-top: 5%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.left-header-div{
+    /* background-color: blue; */
+    margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.prerequisite-div{
+    margin-top: 300px;
+    margin-bottom: 40px;
+}
+}
+
+
+
+@media (min-width: 501px) and (max-width: 785px){
+
+    /* new css starts here */
+    
+
+    .button-p-white{
+        padding: 10px 20px;
+        border: 2px solid cornflowerblue;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;
+
+    }
+    .button-p-dark{
+        padding: 10px 20px;
+        border: 2px solid rgb(81, 130, 221);
+        background-color: cornflowerblue;
+        text-decoration: none;
+        color: white;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;    
+    }
+    .button-p-dark:hover, .button-p-white:hover{
+        text-decoration: none;
+    }
+    .header-row-img-div{
+        margin-top: 70px; padding-top: 2%; padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
+    }
+    .header-row-text-div{
+        margin-top: 70px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .space-div{
+        margin-top: 150px;
+    }
+    .course-images{
+        width: 85%;
+        height: 85%;
+        border-radius: 15px;
+    }
+     .collage-grid-dark{
+        width: 100%;
+        height: 100%;
+    }
+    .header-text{
+        font-weight: bolder; 
+        font-weight: bolder; 
+        color:var(--darktext);
+        font-size: 2.3rem;
+    }
+    .full-width-div{
+        padding-top: 60px; padding-bottom: 40px;
+    }
+    /*
+    
+    .header-row-img-div{
+        margin-top: 100px; padding-top: 5%; padding-bottom: 5%; padding-right: 2%; padding-left: 2%;
+    } */
+
+
+
+    /* and ends here */
+    
+    .head-text{
+        font-size: 4rem;
+        /* color: red; */
+        margin-top: -80px;
+    }
+    .logo-div{
+        margin-top: -35px;
+        margin-left: 30px;
+        /* background-color: cornflowerblue;  */
+    }
+    .navbar-toggler{
+        float: right; 
+        margin-top: 50px;
+    }
+    .main-nav-item{
+        margin-top: -2px;
+        
+    }
+    .logo-div img{
+        width: 60%;
+        height: 60%;
+    }
+    .logo{
+        margin-top: -30px;
+    }
+    .card-img-top{
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+    .vidcard{
+        /* background-color: yellow; */
+        width: 90%; height: 80%;
+        margin: auto;
+    }
+    .vidcard-img{
+        display: none;
+    }
+    .right-header-div{
+        /* background-color: yellow; */
+        margin-top: -10px; padding-top: 5%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .left-header-div{
+        /* background-color: red; */
+         margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .prerequisite-div{
+        margin-top: 500px;
+        margin-bottom: 40px;
+    }
+    
+
+}
+
+@media (min-width: 786px) and (max-width: 1200px){
+    .head-text{
+        font-size: 4rem;
+        /* color: yellow; */
+    }
+
+}
+@media (min-width: 501px) and (max-width: 768px){
+    .vidcard{
+        /* background-color: green; */
+        width: 90%; height: 80%;
+        margin: auto;
+    }
+    .vidcard-img{
+        display: none;
+    }
+    .right-header-div{
+        /* background-color: brown; */
+        margin-top: -10px; padding-top: 5%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .left-header-div{
+        /* background-color:green; */
+         margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .prerequisite-div{
+        margin-top: 2px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1600px){
+    .vidcard{
+        /* background-color: green; */
+        width: 90%; height: 70%;
+        margin: auto;
+    }
+    .vidcard-img{
+        /* display: none; */
+    }
+    /* .right-header-div{
+        background-color: red;
+        margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    } */
+    .left-header-div{
+        /* background-color:yellow;  */
+        margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+
+    .prerequisite-div{
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+}

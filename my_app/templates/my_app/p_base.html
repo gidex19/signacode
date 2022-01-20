@@ -1,0 +1,132 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" />    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="{% static 'my_app/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'my_app/css/front.css' %}">
+
+
+    <title>SignaCode</title>
+</head>
+
+<body>
+    <header class="header-img bg-white">
+        <nav class="navbar navbar-expand-md navbar-dark bg-white fixed-top collapse navbar-collapse">
+            <div class="logo-div ml-4"> <img class=" ml-1 logo" src="{% static 'my_app/images/signa_logo.png' %}">
+                <button class="navbar-toggler bg-dark " type="button" data-toggle="collapse" data-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="container bg-white main-nav-item">
+
+                <div class="collapse navbar-collapse " id="navbarToggle">
+                    <div class="navbar-nav ml-auto pb-4 pr-4 pl-4">
+                        <a class="nav-item nav-link nav-anchor text-dark m-1 mr-1 " href="{% url 'homepage' %}">Home</a>
+                        <a class="nav-item nav-link nav-anchor text-dark m-1 mr-1 " href="{% url 'services' %}">Services</a>
+                        <a class="nav-item nav-link nav-anchor text-dark m-1 mr-1 " href="{% url 'technews' %}">TechNews</a>
+                        <a class="nav-item nav-link nav-anchor text-dark m-1 mr-1 " href="{% url 'about' %}">About Us</a>
+                    {% if user.is_authenticated == True %}
+
+                        <a class="nav-item nav-link nav-anchor text-dark m-1 mr-1 " href="{% url 'logout' %}">Logout</a>
+                        <!--<a class="nav-item nav-link nav-anchor text-dark m-1 mr-1 " href="{% url 'profile' %}">Profile</a>-->
+
+                        <!-- <a href="#" class="btn  btn-outline-info btn-sm"> {{ user.username }}</a> -->
+                        <!-- <a href="#" class="btn  btn-outline-info btn-sm"> <i class="material-icons-outlined g-icon" >dashboard</i></a> -->
+                    {% else %}
+
+                            <a class="nav-item nav-link nav-anchor text-dark m-1 mr-1 " href="{% url 'login' %}">Login</a>
+                            <a class="nav-item nav-link nav-anchor text-dark m-1 mr-1 " href="{% url 'signup' %}">SignUp</a>
+
+                    {% endif %}
+                    <label class="switch">
+                            <i class="fas fa-adjust m-1 mr-1" style="color: black;"></i>
+                            <div >
+                                <input type="checkbox" />
+                                <span class="slider round"></span>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        {% block header-content %}
+
+        {% endblock %}
+
+    </header>
+
+    {% block main-content %}
+
+    {% endblock %}
+    <footer class="footer">
+        <div class="container col-12 container-footer">
+            <div class="row m-0">
+
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2 p-2">
+                    <p class="footer-heading"><b>ABOUT US</b></p>
+                    <p class="text-capitalize small footer-text p-1">
+                        Signacode represents an organisation of professional and creative software developers devoted to solving challenges for our clients. Here at signacode, We can boast of delivering the best and nothing short.
+                        We've spent years serving our clients within the tech niche and that has helped us to better understand the market.
+                    </p>
+
+
+
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2 p-2">
+                    <p class="footer-heading"><b>MENU</b></p>
+                    <a href="{% url 'homepage' %}" class="text-capitalize small anchor-block">Home</a>
+                    <a href="{% url 'services' %}" class="text-capitalize small anchor-block">Services</a>
+                    <a href="{% url 'technews' %}" class="text-capitalize small anchor-block">Tech News</a>
+                    <a href="{% url 'homepage' %}" class="text-capitalize small anchor-block">Articles</a>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2  p-2">
+                    <p class="footer-heading"><b>CONTACT US</b></p>
+                    <a href="#" class="text-capitalize small anchor-block">Facebook</a>
+                    <a href="#" class="text-capitalize small anchor-block">Instagram</a>
+                    <a href="#" class="text-capitalize small anchor-block">Twitter</a>
+                    <a href="#" class="text-capitalize small anchor-block">Penthouse Benin City</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- my javascript contents starts here -->
+        <script src="https://kit.fontawesome.com/882e7752e2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    {% block js %}
+
+    {% endblock js %}
+</body>
+
+</html>

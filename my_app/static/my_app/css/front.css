@@ -1,11 +1,70 @@
+
+
+
+:root{
+
+
+    --navcolor: #072F5F;
+    --purpletext: white;
+    /* --background: #1D2951; */
+    --background: #111111;
+    --background2: #222222;
+    --cardtext: white;
+    --darktext: white;
+    --whitetext: black;
+    --postbg: #333333;
+    --gradient1: #333333;
+    --gradient2: #147cac;
+    --fadeblack: #333333;
+    --boxshadowColor: rgba(248, 249, 250, 0.1);
+
+
+}
+
+.light-theme{
+    --navcolor: black;
+    /* --purpletext: rgb(71, 9, 71); */
+    --purpletext: #3c43ad;
+    --background: white;
+    --background2: #e7eaea;
+    --cardtext: black;
+    --darktext: black;
+    --whitetext: white;
+    --postbg: whitesmoke;
+    --gradient1: #701b8ac0;
+    --gradient2: #147cac;
+    --fadeblack: lightgrey;
+    --boxshadowColor: rgba(0, 0, 0, 0.3);
+}
+.dark-theme{
+    --navcolor: #072F5F;
+    --purpletext: white;
+    /* --background: #1D2951; */
+    --background: #111111;
+    --cardtext: white;
+    --darktext: white;
+    --whitetext: black;
+    --postbg: #333333;
+    --gradient1: #333333;
+    --gradient2: #147cac;
+    --fadeblack: #333333;
+    --boxshadowColor: rgba(248, 249, 250, 0.3);
+}
+
+html{
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    background-color: var(--background);
 }
+
 .header-img{
     /* background-image: linear-gradient(to right, #5bc0de, #0275db); */
     /* background-image: linear-gradient(to right , #701b8ac0, #147cac); */
-    background-color: white;
+    background-color: var(--background);
     /* background-image: url("test.jpg"); */
     width: 100%;
     height: 100%;
@@ -13,17 +72,458 @@ body{
     background-size: cover;
     /* border-bottom: 1px solid black; */
 }
+/* #inputUsername{
+    border-radius: 30px;
+    padding: 10%;
+    box-shadow: 0px 8px 15px var(--boxshadowColor);
+    box-sizing: border-box;
+} */
+#inputfield{
+    border-radius: 30px;
+    box-shadow: 0px 8px 15px var(--boxshadowColor);
+    padding: 11px;
+    box-sizing: border-box;
+}
+
+/* css for learn js page */
+.vidcard{
+    width: 90%; height: 70%;
+}
+.sidecard{
+    background-color:  var(--fadeblack) !important;
+    margin-top: 6px;
+    border-radius: 10px;
+}
+.card-left-design{
+    background-color:  var(--fadeblack) !important;
+    /* margin-top: 10px !important; */
+    margin-bottom: 10px !important;
+    border-left: 3px solid #3c43ad;
+    transition: all 0.5s ease-in-out;
+    /* border: 1px solid #3c43ad; */
+    /* border-radius: 30px; */
+}
+.left-border{
+    border-left: 3px solid #3c43ad;
+}
+.hr-prop{
+    align-self: flex-start;
+    /* color: var(--darktext) !important; */
+    border: 3px solid var(--darktext);
+}
+/* .card-left-design:hover{
+    transform: translateY(-20px);
+
+} */
+.background2{
+    background-color: var(--background2);
+}
+.fadeblack-bg{
+    background-color:  var(--fadeblack) !important;
+}
+.vidcard :hover{
+    /* cursor: pointer; */
+    text-decoration: none;
+}
+.course-anchor{
+    text-decoration: none;
+    cursor: pointer;
+}
+.coloured-bg{
+    background-color: #3c43ad;
+    /* background-color: #a020f0;
+    background-color: #007fff; */
+    transition: all 0.5s ease-in-out;
+}
+.coloured-bg:hover{
+    background-color: #333333;
+}
+.grid-hover-div{
+    height: 45vh;
+}
+.describe-title{
+    color: #3c43ad;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+.describe-title-white{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.techschool-header{
+    background-image: url('techschool-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.course-website-header{
+    background-image: url('paintpallete.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.roadmap{
+    background-image: url('roadmap.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+}
+.techschool-inner-div{
+    margin-top: 300px; 
+    text-align: center; 
+    align-self: center;
+}
+/* 
+.fa-star:hover{
+    color: white;
+} */
+.checked{
+    color: orange;
+}
+
+/* css learn page ends here */
+
+
+.alert .alert-info p{
+    background-color: black !important;
+    color: black !important;
+}
+
+
+/* css for profile page starts here */
+* {
+    margin: 0;
+    padding: 0
+}
+
+.profile-card {
+    width: 350px;
+    background-color: #efefef;
+    border: none;
+    /* cursor: pointer; */
+    transition: all 0.5s
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.profile-card:hover .image img {
+    transform: scale(1.5)
+}
+
+.at-btn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--darktext) !important;
+    text-decoration: none;
+    border: none;
+}
+
+.idd {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--darktext) !important;
+}
+
+.idd1 {
+    font-size: 14px;
+    color: var(--darktext) !important;
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--darktext) !important;
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px
+}
+
+.text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500
+}
+
+.icons i {
+    font-size: 19px
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    color:black;
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}
+
+
+/* css for profile page ends here */
+
+/* css for the test page */
+
+#select{
+    margin-bottom: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 9px;
+    outline-style: none;
+
+}
+.options{
+    padding: 30px;
+}
+.inline{
+    display: inline;
+}
+.content{
+
+    width: 100%;
+    margin: auto;
+
+}
+
+
+.prev{
+    float: left;
+    margin-left: 40px;
+    margin-right: 4px;
+}
+.next{
+    float: right;
+    margin-right: 40px;
+    margin-left: 4px;
+}
+
+#infobtn, #submit, #timebtn{
+    float: right;
+    margin: 2px;
+}
+
+#navqstns{
+    display: inline;
+    margin-top: 10px;
+}
+
+.main-div{
+    display: grid;
+}
+.content-result, .correction-div{
+    margin: auto;
+    width: 100%;
+}
+#resultdiv{
+    margin-top: auto;
+    margin: auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    padding: 20px;
+    border-radius: 13px;
+    text-align: center;
+}
+.choosen{
+    background-color: lightcoral;
+    font-size: x-large;
+    color: white;
+}
+.content{
+
+    width: 100%;
+    margin: auto;
+
+}
+.toggler-color{
+    color: #3c43ad   !important;
+    border: none;
+}
+
+/* css for test page ends here */
+
+/* latest css here */
+.header{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: linear-gradient(to right , rgba(115, 179, 199, 0.7), rgba(70, 189, 173, 0.8)); */
+}
+.bg-img{
+    object-fit: cover; 
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+}
+.header-row{
+    width: 100vw;
+    height: 100vh;
+}
+.right-header-div{
+    margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.left-header-div{
+    margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.prerequisite-div{
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+.header-row-text-div{
+    margin-top: 150px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.header-row-img-div{
+    margin-top: 100px; padding-top: 5%; padding-bottom: 5%; padding-right: 2%; padding-left: 2%;
+}
+.course-images{
+    width: 100%; height: 100%; object-fit: contain; border-radius: 15px;
+}
+.space-div{
+    margin-top: 100px;       
+}
+.full-width-div{
+    padding-top: 100px; padding-bottom: 100px;
+}
+.hero-section{
+
+    margin-top: -50vh;
+    margin-left: 7%;
+    z-index: 5;
+
+}
+.header-text{
+    font-weight: bolder; 
+    font-weight: bolder; 
+    color:var(--darktext);
+    font-size: 3rem;
+}
+.button-p-white{
+    padding: 20px 40px;
+    border: 3px solid cornflowerblue;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+.button-p-dark{
+    padding: 20px 40px;
+    border: 3px solid rgb(81, 130, 221);
+    background-color: cornflowerblue;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.button-p-dark:hover, .button-p-white:hover{
+    text-decoration: none;
+}
+.modal-button{
+    padding: 10px 20px;
+    border: 2px solid rgb(81, 130, 221);
+    background-color: cornflowerblue;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.sub-head{
+    font-size: 18px;
+    font-weight: bolder !important ;
+    color: var(--purpletext) !important;
+}
+.darktext{
+    color: var(--darktext) ;
+}
+
+.custom-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .disc-ul {
+    list-style-type: disc !important;
+    padding-left: 1em !important;
+    margin-left: 1em;
+  }
+  .tab-ul{
+      list-style-type: none !important;
+  }
+  
+  .course-title{
+    font-size: 13px;
+    font-weight: bolder;
+  }
+
+  
+    label{
+        color: var(--darktext) !important;
+        /* color: white; */
+    }
+    .interest-container{
+        background-image: url("darkbg.jpg") !important;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+
+/* latest ends here */
+
+
+
 nav{
     height:90px;
     background-image: white;
-    border-bottom: 1px solid rgb(71, 9, 71);
+    border-bottom: 1px solid var(--purpletext);
+    background-color: var(--background);
     /* background-image: linear-gradient(to right, #000000, #202020); */
     /* /* background-color: white; */
+}
+.nav-item{
+    color: var(--darktext) !important;
+}
+.main-nav-item{
+    background-color: var(--background);
+}
+a{
+    color: var(--darktext);
 }
 .cbtn{
     border-color: black;
 }
-.logo{
+.logo, .logo2{
     width: 70%;
     height: 70%;
 }
@@ -31,15 +531,15 @@ nav{
     margin-top: 17em;
     /*background-color: rgb(255, 230, 0); */
     /* top: -40px; */
-    animation-name: div-slide;
+    /* animation-name: div-slide;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-    opacity: 0;
+    opacity: 0; */
 }
-@keyframes div-slide{
+/* @keyframes div-slide{
     0%{ opacity: 0; transform: translateX(50%);}
     100%{ opacity: 1; transform: translateX(0%);}
-}
+} */
 
 .img{
     background-position: center;
@@ -54,11 +554,13 @@ nav{
 .head-text{
     font-size: 5rem;
     font-weight: 800;
-    color: rgb(71, 9, 71);
+    color: var(--purpletext);
 }
 .med-text{
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
+    color: var(--darktext);
+    
 }
 .img img {
     width: 100%;
@@ -71,20 +573,85 @@ nav{
      margin-left: 20px;
      margin-right: auto;
 }
+.svg{
+    position: absolute;
+    display: flex;
+    /* top: 50;
+    left: 50;  */
+    /* margin: auto; */
+    transform: translate(0, 0);
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+
+}
+#blob0, #blob1{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
 .svg-div{
     width: 80%;
     height: 80%;
-    animation-name: svg-slide;
+    /* animation-name: svg-slide;
     animation-duration: 3s;
     animation-fill-mode: forwards;
     opacity: 0;
-    
+     */
 }
-@keyframes svg-slide{
+/* css toggle starts here  */
+.switch {
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .switch div {
+    position: relative;
+    display: block;
+    background: #eee;
+    width: 30px;
+    border-radius: 50px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .fa-adjust {
+    transform: rotate(180deg);
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    background-color: #999;
+    transition: 0.4s;
+    border-radius: 34px;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    position: relative;
+  }
+  input:checked + .slider {
+    transform: translateX(8px);
+  }
+
+/* ends here */
+/* @keyframes svg-slide{
     0%{ opacity: 0; transform: translateY(80%);}
     20%{ opacity: 0; transform: translateY(80%);}
     100%{ opacity: 1; transform: translateY(0%);}
-}
+} */
 
 .icon{
     width: 100%;
@@ -93,67 +660,195 @@ nav{
     width: 100%;
 }
 .icon-div{
-    border: 1px solid rgb(71, 9, 71);
+    border: 1px solid var(--purpletext);
     border-radius: 8px;
 }
 .g-icon{
     font-size: 60px;
-    color: rgb(71, 9, 71); 
+    color: var(--purpletext); 
     text-align: center;
     /* background: linear-gradient(to right, #147cac, #701b8ac0); */
 
+}
+.purple-text{
+    color: var(--purpletext)
+}
+.light-bg{
+    background-color: var(--postbg);
+}
+.white-bg{
+    background-color: var(--background);
+}
+
+
+.btn{
+    border-radius: 30px !important;
+}
+.bold-text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.small-p{
+    font-size: 12px;
+    color: black !important;
+    font-weight: 600;
+}
+.small-and-bold{
+    font-size: 13px;
+    color: var(--darktext) !important;
+    font-weight: 600 !important;
+}
+.menu-text{
+    font-size: 13px;
+    color: var(--darktext);
+    font-weight: 600;
+}
+.menu-text:hover{
+    color: #3c43ad !important;
 }
 .button{
     
     width: 100px;
     height: 50px;
+    
     background: transparent;
-    color:black;
-    padding-right: 13px;
-    padding-left: 13px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    color:var(--darktext);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px !important;
+    border: none !important;
+    box-shadow: 0px 8px 15px var(--boxshadowColor);
+    transition: all 0.3s ease 0s;
     font-size: 15px;
     font-weight: bolder;
-    border: 1px solid rgb(71, 9, 71);
+    border: 1px solid var(--purpletext);
     text-decoration: none;
     border-radius: 4px;
     
 }
+.outline-button{
+    border: 2px solid #3c43ad !important;
+    padding: 15px 30px !important;
 
+}
+.no-outline-button{
+    background-color: #3c43ad !important;
+    padding: 15px 30px !important;
+    color: white !important;
+}
+
+.button:hover{
+background-color: #3c43ad;
+  box-shadow: 0px 15px 20px rgba(131, 150, 142, 0.4);
+  color: #fff;
+  transform: translateY(-10px) !important;
+  text-decoration: none; 
+}
+
+.medium-btn{
+    padding: 15px 30px;
+    font-size: 15px;
+}
+.small-btn{
+    padding: 7px 14px;
+    font-size: 11px;
+}
+
+.default-btn{
+    width: 100px;
+    height: 50px;
+    
+    background: white;
+    color:black;
+    border-radius: 30px !important;
+    border: none !important;
+    box-shadow: 0px 8px 15px var(--boxshadowColor);
+    transition: all 0.3s ease 0s;
+    
+    font-weight: bolder;
+    /* border: 1px solid var(--purpletext); */
+    text-decoration: none;
+    border-radius: 4px;
+
+}
+.default-btn:hover{
+  background-color: black;
+  /* box-shadow: 0px 15px 20px rgba(255, 254, 254, 0.4); */
+  color: #fff !important;
+  transform: translateY(-10px) !important;
+  text-decoration: none; 
+} 
+.gradient-sect{
+    padding: 20px 20px;
+    border-radius: 50px;
+    margin-top: 30px;
+    background-image: linear-gradient(to right , var(--gradient1) , var(--gradient2) ) !important;
+    /* background-image: url('happygirl.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.layered-peak{
+    background-image: url('layered-peaks.svg');
+}
+.svg-curve{
+    padding: 0; margin: 0; background-color: #3c43ad;
+}
+.curve-upper{
+    background-color:var(--background);
+}
+.lower-div{
+    fill: var(--background);
+    
+}
+.row-eq-height{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:  flex;
+  
+}
 
 /* css code for the login page starts here*/
 .button-mini{
     
     width: 100px;
     height: 50px;
-    background: transparent;
-    color:rgb(71, 9, 71);;
-    padding-right: 13px;
-    padding-left: 13px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    font-size: 15px;
+    background: var(--postbg);
+    /* color:rgb(71, 9, 71); */
+    color:var(--purpletext);
+    padding: 7px 14px;
+    font-size: 11px;
     font-weight: bold;
-    border: 2px solid rgb(71, 9, 71);
+    transition: all 0.4s ease-in-out;
+    border: 2px solid var(--purpletext);
+    border-radius: 30px;
     text-align: center;
     text-decoration: none;
 }
+.button-mini:hover{
+    background-color: #3c43ad;
+  /* box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4); */
+  color: #fff;
+  transform: translateY(-8px) !important;
+  text-decoration: none; 
+}
+
 .button-normal{
     
 }
 .large-bold{
     font-size: 35px;
-    color: rgb(71, 9, 71);
+    color: var(--purpletext);
     font-weight: 900;
 }
-.button-mini:hover, .button:hover{
-    color: white;
-    background-color: rgb(71, 9, 71);    
-}
+
 .small-purple{
     font-size: 11px;
     font-weight: 900;
+    color: var();
 }
 
 .form-div{
@@ -185,8 +880,11 @@ nav{
     padding: 4px;
     font-size: 18px;
     font-weight: bolder;
-    color:black;
-    border-bottom: 4px solid black;
+    color:var(--darktext);
+    border-bottom: 4px solid var(--darktext);
+}
+.articles-div{
+    background-color: var(--postbg);
 }
 .post-image-div{
     width: 400px;
@@ -203,12 +901,33 @@ nav{
 .post-heading{
     font-weight: bolder;
     text-transform: capitalize;
+    color: var(--darktext) !important;
 }
-.post-body{
-    font-size: 12px;
+.card{
+    background-color: var(--postbg) !important;
+    box-shadow: 0px 8px 15px var(--boxshadowColor);
+    
 }
+
+.post-body, p, li{
+    font-size: 13px;
+    color: var(--darktext) !important;
+}
+.post-body p{
+    font-size: 13px;
+    color: white !important;
+}
+.large-p{
+    font-size: 30px !important;
+    color: var(--darktext);
+}
+
+h3{
+    color: var(--darktext);
+}
+
 .white{
-    color: white;
+    color: white !important;
 }
 /* profile css styling starts here */
 .profile-container{
@@ -247,35 +966,78 @@ nav{
 /* profile css styling ends here */
 
 .card{
-    /* border-top: 1px solid purple; */
+    
     border-radius: 12px;
 }
 .card-img-top{
     width: 100%;
     height: 15vw;
     object-fit: cover;
-}
+    transition: all 1s ease-in-out;
 
+}
+.zoom:hover{
+    transform: scale(1.3);
+}
+.translate-y{
+    transition: all 0.5s ease-in-out;
+}
+.translate-y:hover{
+    transform: translateY(-13px);
+}
+.web-img-div{
+    background-image: url('code-test.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s ease-in-out;
+    overflow: hidden; position: relative;
+}
+.blockchain-img-div{
+    background-image: url('crypto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s ease-in-out;
+    overflow: hidden; position: relative;
+}
+.branding-img-div{
+    background-image: url('branding.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s ease-in-out;
+    overflow: hidden; position: relative;
+}
+.learning-img-div{
+    background-image: url('learning.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s ease-in-out;
+    overflow: hidden; position: relative;
+}
 /* footer css starts here */
+
 .footer{
     margin-top: 30px;
-    background-image: linear-gradient(to right , #701b8ac0, #147cac);
+    /* background-image: linear-gradient(to right , #701b8ac0, #147cac); */
+    background-image: linear-gradient(to right , var(--gradient1) , var(--gradient2));
+    
 }
 .linear{
-    background-image: linear-gradient(to right , #701b8ac0, #147cac);
+    /* background-image: linear-gradient(to right , #701b8ac0, #147cac); */
+    background-image: linear-gradient(to right , var(--gradient1) , var(--gradient2));
 }
 .container-footer{
     padding: 40px;
+    padding-top: 10px;
 
 }
 .footer-heading{
     font-size: 23px;
-    color: white;
+    color: white !important;
     font-weight: bolder;
 }
 .footer-text{
     font-size: 13px;
-    color: white;
+    color: white !important;
     font-weight: 500;
 }
 .anchor-block{
@@ -293,9 +1055,82 @@ nav{
 
 
 /* foorter css ends here  */
+@media all and (max-width: 380px){
+    .techschool-header{
+        height: 90vh;
+    }
+    .course-website-header{
+        height: 90vh;
+    }
+    .button-p-white{
+        padding: 6px 12px;
+        border: 2px solid cornflowerblue;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+
+    }
+    .button-p-dark{
+        padding: 6px 12px;
+        border: 2px solid rgb(81, 130, 221);
+        background-color: cornflowerblue;
+        text-decoration: none;
+        color: white;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;    
+    }
+    .large-p{
+        font-size: 20px !important;
+       
+    }
+    .grid-hover-div{
+        height: 28vh;
+    }
+    
+    .header-content{
+        background-image: url('happygirl.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .header-row-img-div{
+        margin-top: -30px; padding-top: 2%; padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
+    }
+    .space-div{
+        margin-top: 150px;
+    }
+    .course-images{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+     .collage-grid-dark{
+        width: 100%;
+        height: 100%;
+        /* border-radius: 15px; */
+    }
+    .header-text{
+        font-weight: bolder; 
+        font-weight: bolder; 
+        color:var(--darktext);
+        font-size: 2.3rem;
+    }
+    .full-width-div{
+        padding-top: 60px; padding-bottom: 40px;
+    }
+    /*
+    .header-row-text-div{
+        margin-top: 150px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .header-row-img-div{
+        margin-top: 100px; padding-top: 5%; padding-bottom: 5%; padding-right: 2%; padding-left: 2%;
+    } */
 
 
-@media all and (max-width: 500px) {
+    /* ends here */
+    
     .logo-div{
         margin-top: -40px;
         /* background-color: green; */
@@ -313,7 +1148,12 @@ nav{
         margin-top: 10em;
     }
     .head-text{
-        font-size: 4rem;
+        font-size: 2rem;
+    }
+    .bold-text{
+        
+        font-size: 2rem;
+        font-weight: 600;
     }
     .svg-div .img{   
         margin-top: -100px;
@@ -339,11 +1179,250 @@ nav{
     height: 40vw;
     object-fit: cover;
 }
-
+.vidcard{
+    width: 90%; height: 70%;
+    margin: auto;
+}
+.vidcard-img{
+    display: none;
+}
+.right-header-div{
+    
+    margin-top: -10px; padding-top: 5%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.left-header-div{
+    /* background-color: cornflowerblue; */
+    margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.prerequisite-div{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
 
 }
 
+
+@media (min-width:381px) and (max-width: 500px) {
+    /* new css here */
+
+    .techschool-header{
+        height: 100vh;
+    }
+    .course-website-header{
+        height: 100vh;
+    }
+    .button-p-white{
+        padding: 10px 20px;
+        border: 2px solid cornflowerblue;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;
+
+    }
+    .button-p-dark{
+        padding: 10px 20px;
+        border: 3px solid rgb(81, 130, 221);
+        background-color: cornflowerblue;
+        text-decoration: none;
+        color: white;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;    
+    }
+    .large-p{
+        font-size: 20px !important;
+       
+    }
+    .grid-hover-div{
+        height: 36vh;
+    }
+    .button-p-dark:hover, .button-p-white:hover{
+        text-decoration: none;
+    }
+    .header-row-img-div{
+        margin-top: -30px; padding-top: 2%; padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
+    }
+    .space-div{
+        margin-top: 150px;
+    }
+    .course-images{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+     .collage-grid-dark{
+        width: 100%;
+        height: 100%;
+        /* border-radius: 15px; */
+    }
+    .header-text{
+        font-weight: bolder; 
+        font-weight: bolder; 
+        color:var(--darktext);
+        font-size: 2.3rem;
+    }
+    .full-width-div{
+        padding-top: 60px; padding-bottom: 40px;
+    }
+    /*
+    .header-row-text-div{
+        margin-top: 150px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .header-row-img-div{
+        margin-top: 100px; padding-top: 5%; padding-bottom: 5%; padding-right: 2%; padding-left: 2%;
+    } */
+
+
+    /* ends here */
+    
+    .logo-div{
+        margin-top: -40px;
+        /* background-color: green; */
+    }
+    .logo-div img{
+        width: 40%;
+        height: 20%;
+        margin-left: 2px;
+    }
+    .navbar-toggler{
+        float: right; 
+        margin-top: 50px;
+    }
+    .div-bg{
+        margin-top: 10em;
+    }
+    .head-text{
+        font-size: 2rem !important;
+    }
+    .bold-text{
+        
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .svg-div .img{   
+        margin-top: -100px;
+        margin-left: 10px;
+        margin-right: auto;
+   }
+   
+   .main-nav-item{
+       margin-top: -20px;
+   }
+   .large-bold{
+    font-size: 28px;
+    font-weight: 900;
+}
+.small-purple{
+    font-size: 10px;
+    
+}
+.top-space-medium{
+    margin-top: 120px;
+}
+.card-img-top{
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+}
+.vidcard{
+    width: 90%; height: 70%;
+    margin: auto;
+}
+.vidcard-img{
+    display: none;
+}
+.right-header-div{
+    
+    margin-top: -10px; padding-top: 5%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.left-header-div{
+    /* background-color: blue; */
+    margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+}
+.header-row{
+    width: 100vw;
+    height: 100vh;
+}
+.prerequisite-div{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+}
+
+
+
 @media (min-width: 501px) and (max-width: 785px){
+
+    /* new css starts here */
+    .techschool-header{
+        height: 80vh;
+    }
+    .course-website-header{
+        height: 80vh;
+    }
+
+    .button-p-white{
+        padding: 10px 20px;
+        border: 2px solid cornflowerblue;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;
+
+    }
+    .button-p-dark{
+        padding: 10px 20px;
+        border: 2px solid rgb(81, 130, 221);
+        background-color: cornflowerblue;
+        text-decoration: none;
+        color: white;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;    
+    }
+    .button-p-dark:hover, .button-p-white:hover{
+        text-decoration: none;
+    }
+    .header-row-img-div{
+        margin-top: 70px; padding-top: 2%; padding-bottom: 2%; padding-right: 2%; padding-left: 2%;
+    }
+    .header-row-text-div{
+        margin-top: 70px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .space-div{
+        margin-top: 150px;
+    }
+    .grid-hover-div{
+        height: 36vh;
+    }
+    .course-images{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+     .collage-grid-dark{
+        width: 100%;
+        height: 100%;
+        /* border-radius: 15px; */
+    }
+    .header-text{
+        font-weight: bolder; 
+        font-weight: bolder; 
+        color:var(--darktext);
+        font-size: 2.3rem;
+    }
+    .full-width-div{
+        padding-top: 60px; padding-bottom: 40px;
+    }
+    /*
+    
+    .header-row-img-div{
+        margin-top: 100px; padding-top: 5%; padding-bottom: 5%; padding-right: 2%; padding-left: 2%;
+    } */
+
+
+
+    /* and ends here */
+    
     .head-text{
         font-size: 4rem;
         /* color: red; */
@@ -366,7 +1445,7 @@ nav{
         width: 60%;
         height: 60%;
     }
-    .logo{
+    .logo, .logo2{
         margin-top: -30px;
     }
     .card-img-top{
@@ -374,6 +1453,31 @@ nav{
         height: 15vw;
         object-fit: cover;
     }
+    .vidcard{
+        /* background-color: yellow; */
+        width: 90%; height: 80%;
+        margin: auto;
+    }
+    .vidcard-img{
+        display: none;
+    }
+    .right-header-div{
+        /* background-color: yellow; */
+        margin-top: -10px; padding-top: 5%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .left-header-div{
+        /* background-color: red; */
+         margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .header-row{
+        width: 100vw;
+        height: 95vh;
+    }
+    .prerequisite-div{
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    
 
 }
 
@@ -382,6 +1486,61 @@ nav{
         font-size: 4rem;
         /* color: yellow; */
     }
+    .techschool-header{
+        height: 70vh;
+    }
+    .course-website-header{
+        height: 70vh;
+    }
 
 }
+@media (min-width: 501px) and (max-width: 768px){
+    .vidcard{
+        /* background-color: green; */
+        width: 90%; height: 80%;
+        margin: auto;
+    }
+    .vidcard-img{
+        display: none;
+    }
+    .right-header-div{
+        /* background-color: brown; */
+        margin-top: -10px; padding-top: 5%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .left-header-div{
+        /* background-color:green; */
+         margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+    .header-row{
+        width: 100vw;
+        height: 100vh;
+    }
+    .prerequisite-div{
+        margin-top: 2px;
+        margin-bottom: 40px;
+    }
+}
 
+@media (min-width: 769px) and (max-width: 1600px){
+    .vidcard{
+        /* background-color: green; */
+        width: 90%; height: 78%;
+        margin: auto;
+    }
+    .vidcard-img{
+        /* display: none; */
+    }
+    /* .right-header-div{
+        background-color: red;
+        margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    } */
+    .left-header-div{
+        /* background-color:yellow;  */
+        margin-top: 120px; padding-top: 15%; padding-bottom: 15%; padding-right: 8%; padding-left: 8%;
+    }
+
+    .prerequisite-div{
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+}

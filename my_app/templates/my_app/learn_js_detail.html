@@ -1,0 +1,114 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block main-content %}
+<div class="container-fluid top-space-medium" >
+    <div class="row m-auto">
+        <div  class="col-10 col-sm-10 col-md-7 col-lg-7 text-center mt-4" >
+            <!-- <video width="98%" height="400px" controls controlsList="nodownload">
+            <source src="{{ course.video.url }}" type="video/mp4">    
+            </video> -->
+          <div style="width: 98%; ">
+
+            <video
+            id="videoPlayer"
+            class="video-js vjs-big-play-centered m-auto"
+            controls
+            preload="auto"
+            width="700"
+            height="400"
+            poster="MY_VIDEO_POSTER.jpg"
+            data-setup="{}">
+            <source src="{{course.video.url}}" type="video/mp4" />
+            <!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank"
+                >supports HTML5 video</a>
+            </p>
+  
+          </video>
+          <div class=" col-6 m-auto mt-4" style="width: 96%;">
+            <div class="m-auto text-center">
+              <button id="fastRewindBtn" class="btn btn-sm btn-outline-info text-center " ><i class="fas fa-fast-backward"></i></button>
+              <button id="rewindBtn" class="btn btn-sm btn-outline-info text-center " ><i class="fas fa-backward"></i></button>
+              <button id="forwardBtn" class="btn btn-sm btn-outline-info text-center "><i class="fas fa-forward"></i></button>
+              <button id="fastForwardBtn" class="btn btn-sm btn-outline-info text-center "><i class="fas fa-fast-forward"></i></button>
+            </div>
+            
+          </div>
+          </div>  
+            <div class="mt-4">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active ml-4 mr-4"><a data-toggle="tab" href="#overview">Overview</a></li>
+                    <li class="ml-4 mr-4"><a data-toggle="tab" href="#tasks">Tasks and Projects</a></li>
+                    <li class="ml-4 mr-4"><a data-toggle="tab" href="#resources">Resources</a></li>
+                    <!-- <li class="ml-4 mr-4"><a data-toggle="tab" href="#menu2">Assignments</a></li> -->
+                  </ul>
+                  
+                  <div class="tab-content mt-4 fadeblack-bg p-1 text-left" style="border-radius: 15px;">
+                    <div  id="overview" class="tab-pane fade show active post-bg text-left p-4">
+                      {{course.overview|safe}}
+                    </div>
+                    <div id="tasks" class="tab-pane fade post-bg text-left p-4">
+                      {% if course.test_available == True %}
+                      <p>Test your abilities and level of comprehension by taking a quick test</p>
+                      <span><a class="btn btn-sm btn-outline-info mt-2 mb-2" href="{% url 'take_test' 'learn-js' course.id %}">Take test</a></span>
+                      {% else %}
+                      <p>No available test  {{course.test_available}}</p>
+                      {% endif %}
+                      {{course.task_and_projects|safe}}
+                    </div>
+                    <div id="resources" class="tab-pane fade post-bg text-left p-4">
+                      {{course.resources|safe}}
+                    </div>
+                  </div>
+                  
+
+            </div>
+            
+        </div>
+        <div class="col-10 col-sm-10 col-md-4 col-lg-4 mt-4" >
+            <h5 class="darktext">Course Content</h5>
+            
+            {% for js_course in js_courses %}
+            <div class="card-body sidecard">
+                <!-- <a class="course-anchor" href="{% url 'learn_js_detail' course.id %}"> -->
+                    
+                <a class="course-anchor" data-toggle="modal" data-target="#course-{{course.id}}" role="button" >  
+                <p style="margin: 0;" class="card-title course-title ">
+                   <span>{% if user.js_paid%}<i class="fas fa-lock-open fa-1x"></i>
+                  {%else%}<i class="fas fa-lock fa-1x"></i></span>{% endif %}  {{ js_course.title }}</p>
+                </a>
+                
+                <p style="margin: 0; font-size: 10px !important;" class="mt-1">By Anonymous</p>
+                <p style="margin: 0; font-size: 10px !important;" >Dec 10, 2021  <span class="badge badge-secondary" style="font-size: 11px !important;">{{course.duration}}</span>
+                  {% if js_course.test_available %}
+            <span><a class="btn btn-sm btn-outline-info" href="{% url 'take_test' 'learn-js' js_course.id %}">Take test</a></span>
+                  {% endif %}
+                </p>
+                
+              </div>
+            {% endfor %}
+
+
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock main-content %}
+
+
+
+{% block js %}
+
+<script src="{% static 'my_app/js/myjs.js'%}"></script>
+<script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+
+{% endblock js %}
+

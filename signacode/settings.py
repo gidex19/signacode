@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_ace',
     'crispy_forms',
     'my_app.apps.MyAppConfig',
     'django.contrib.admin',
@@ -117,7 +118,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+psk = "sk_test_a18b4a0dcad6d60a03b5be78a47e14f8d28686ce"
+ppk = "pk_test_80c9e3e62c12dca2e7a51baaccf342279ffa8f1a"
 
+
+# mname = 'Gideon zozzo'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 

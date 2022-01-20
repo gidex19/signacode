@@ -8,3 +8,5 @@ def image_validator(value):
     if not ext.lower() in valid_ext:
         print('Image selected must be of jpeg format')
         raise ValidationError(u'Image selected must be of jpeg format')
+
+

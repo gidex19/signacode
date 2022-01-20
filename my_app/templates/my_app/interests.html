@@ -1,0 +1,101 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block main-content %}
+<div   class="container top-space-large  ">
+    <div class="row">
+        <div class="col-xs-10 col-sm-10 col-md-5 col-lg-5 light-bg rounded m-auto">
+            <!-- <button  type="button" class="small btn btn-info" id="testbtn" href="#" data-toggle="modal" data-target="#exampleModal">testbtn</button> -->
+           
+            <form method="POST" class="p-4">
+                <p class="small  text-capitalize">Select your interests for streamlined contents</p>
+                {% csrf_token %}
+                <div class="form-group " id="inputUsername">
+
+                    {{ form|crispy }}
+                    {{mform|crispy }}
+                </div>
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <button class="button-mini text-capitalize text-center mb-2 mt-4" type="submit">Submit</button>
+                <div class="text-left">
+
+                    <a style="text-decoration: none;" class="small ml-1 mr-4" href="{% url 'signup' %}">Return to Homepage</a>
+                    <a style="text-decoration: none;" class="small ml-2" href="#">View profile</a>
+                </div>
+        </div>
+
+
+        </form>
+    </div>
+
+</div>
+
+</div>
+
+{% endblock main-content %}
+
+{% block js %}
+<!-- <script src="{% static 'my_app/js/test.js'%}">
+
+</script> -->
+<!-- <script>
+
+        {% if x == True %}
+        $("#exampleModal").modal('show');
+        {% endif %}
+    
+</script> -->
+<script src="{% static 'my_app/js/myjs.js'%}"></script>
+
+{% endblock js %}
+
+
+
+<!-- 
+<footer class="footer">
+    
+    <div class="container col-12 container-footer">
+        <div class="row m-0">
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2 p-2">
+                <p class="footer-heading"><b>ABOUT US</b></p>
+                <p class="text-capitalize small footer-text white">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At minus deserunt quidem quis ducimus.
+                    Accusamus temporibus, Architecto eaque deleniti reiciendis impedit! Aperiam fugiat tempore ea
+                    earum In deserunt voluptates, ducimus illo neque nostrum aliquid?
+                </p>
+                <p class="text-capitalize small footer-text">Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Consectetur, sequi?</p>
+
+
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2 p-2">
+                <p class="footer-heading"><b>MENU</b></p>
+                <a href="{% url 'homepage' %}" class="text-capitalize small anchor-block">Home</a>
+                <a href="{% url 'services' %}" class="text-capitalize small anchor-block">Services</a>
+                <a href="{% url 'technews' %}" class="text-capitalize small anchor-block">Tech News</a>
+                <a href="{% url 'homepage' %}" class="text-capitalize small anchor-block">Articles</a>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2  p-2">
+                <p class="footer-heading"><b>CONTACT US</b></p>
+                <a href="#" class="text-capitalize small anchor-block">Facebook</a>
+                <a href="#" class="text-capitalize small anchor-block">Instagram</a>
+                <a href="#" class="text-capitalize small anchor-block">Twitter</a>
+                <a href="#" class="text-capitalize small anchor-block">Penthouse Benin City</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer> -->

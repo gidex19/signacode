@@ -1,0 +1,195 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block main-content %}
+
+
+<!-- <div style="margin-top: 100px; background-color: yellow;">
+
+</div> -->
+<div class="container-fluid ">
+  <div class="row course-website-header">
+    <div class="m-auto col-12 col-sm-12 col-md-9 col-lg-8 ">
+      <div class="m-auto" >
+        
+        <h1 class="header-text text-center"><b>HTML and CSS</b></h1>
+        <p class="mt-4 mb-3 text-center p-3"> Hypertext Markup Language(HTML) is a markup language used to give structure and add Contents
+            to webpages. While Cascading Style Sheets(CSS) is a style sheet language used to add styles and designs to the webpage designed 
+            by HTML.</p>
+        <div style="padding-top: 30px; " class="m-auto text-center">
+          {% if user.js_paid == True %}
+          <a class=" default-btn medium-btn" href="#main-div">Start Course</a>
+          {% else %}
+          <p class="small-and-bold mb-4">pay N10,000 to get started with this course </p>
+          <a class=" default-btn medium-btn" href="{% url 'subscribe_js' %}">Pay For Course</a>
+          {% endif %}
+          
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-12 col-sm-12 col-md-11 col-lg-6 p-4">
+      <div class="right-header-div">
+        <h2 class="header-text"><b>What you will learn</b></h2>
+        <ul class="disc-ul">
+          <li>
+            <p>Utilize modules for code organization</p>
+          </li>
+          <li>
+            <p>Understand communication and browser integration</p>
+          </li>
+          <li>
+            <p>Demonstrate asynchronous programming techniques</p>
+          </li>
+          <li>
+            <p>Employ classes for code organization</p>
+          </li>
+           
+        </ul>
+      </div>
+    </div> -->
+  </div>
+
+</div>
+
+
+<div class="container-fluid prerequisite-div ">
+  <div class="row m-auto">
+    <div class="col-11 col-sm-11 col-md-5 col-lg-5 m-auto rounded">
+      <div class="bg-dark row m-auto p-4">
+        
+        <div class="col-3">
+
+          <i class="fab fa-js-square fa-7x"></i>
+        </div>
+        <div class="custom-center">
+          <h5 class="text-center white"><b>Course Requirements</b></h5>
+          <ul class="disc-ul">
+            <li class="white">Basic knowledge of HTML and CSS</li>
+            <li class="white">A good working personal computer</li>
+            <li class="white">Access to Good Internet Connection</li>
+            <!-- <li class="white">Lorem ipsum dolor sit amet consectetur adipisicing.</li> -->
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-11 col-sm-11 col-md-5 col-lg-5 m-auto">
+
+      <h2 class="header-text"><b>What you will learn</b></h2>
+        <ul class="disc-ul">
+          <li>
+            <p>Utilize modules for code organization</p>
+          </li>
+          <li>
+            <p>Understand communication and browser integration</p>
+          </li>
+          <li>
+            <p>Demonstrate asynchronous programming techniques</p>
+          </li>
+          <li>
+            <p>Employ classes for code organization</p>
+          </li>
+           
+        </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="container" id="main-div">
+  <div class="row " >
+    
+    {% for course in js_courses %}
+    <div class="col-xs-5 col-sm-6 col-md-6 col-lg-3 mt-0 d-flex align-items-stretch">
+      
+        <div class="vidcard card mt-4 mb-4 " style="margin: auto;">
+          <img class="card-img-top vidcard-img" src="{{ course.image.url }}" alt="Card image cap">
+        <div class="card-body">
+          <!-- <a class="course-anchor" href="{% url 'learn_js_detail' course.id %}"> -->
+              
+          <a class="course-anchor" data-toggle="modal" data-target="#course-{{course.id}}" role="button" >  
+          <p style="margin: 0;" class="card-title course-title ">
+             <span>{% if user.js_paid%}<i class="fas fa-lock-open fa-1x"></i>
+            {%else%}<i class="fas fa-lock fa-1x"></i></span>{% endif %}  {{ course.title }}</p>
+          </a>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <p style="margin: 0; font-size: 10px !important;" class="mt-1">By Anonymous</p>
+          <p style="margin: 0; font-size: 10px !important;" >Dec 10, 2021  <span class="badge badge-secondary" style="font-size: 11px !important;">{{course.duration}}</span></p>
+
+        </div>
+        </div>
+
+
+        <div class="modal fade " id="course-{{course.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <!-- <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div> -->
+              <div class="modal-body bg-dark">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-10 col-sm-10 col-md-5 col-lg-5 m-auto">
+                      <h3>Description</h3>
+                      <p>{{course.title}}</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla facilis voluptatibus nisi tenetur soluta eius. Quae doloremque soluta ipsum architecto dignissimos hic impedit asperiores ipsa ea consectetur? Fugiat, nisi!</p>
+                    </div>
+                    <div class="col-10 col-sm-10 col-md-5 col-lg-5 m-auto">
+                      <p style="text-decoration: underline;">Table of Contents</p>
+                      <!-- <ol>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                      </ol> -->
+                      {{course.toc|safe}}
+                    </div>
+                  </div>
+
+                </div>
+                <!-- <h1>{{course.id}} {{course.title}}</h1>> -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                {% if request.user.js_paid == True %}
+                <a href="{% url 'learn_js_detail' course.id %}" type="button" class="btn btn-primary">Get Started</a>
+                {% else %}
+                <a href="{% url 'subscribe_js'  %}" type="button" class="btn btn-primary">Pay For Course</a>
+              
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+    
+    {% endfor %}
+
+
+</div>
+</div>
+
+{% endblock main-content %}
+
+
+{% block js %}
+<script src="{% static 'my_app/js/myjs.js'%}"></script>
+
+
+{% endblock js %}
+
+

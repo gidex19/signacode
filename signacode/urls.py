@@ -20,10 +20,11 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.views.static import serve
 from django.contrib.auth import views as auth_views
-
+from my_app import views as my_app_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('/<slug:filled>/', my_app_view.home, name = 'homepage'),
     path('', include('my_app.urls')),
 ]
 if settings.DEBUG:

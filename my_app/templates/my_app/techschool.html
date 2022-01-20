@@ -1,0 +1,264 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block main-content %}
+
+
+<!-- <div style="margin-top: 100px; background-color: yellow;">
+
+</div> -->
+<div class="container-fluid techschool-header">
+  <div class="row">
+    <div class=" m-auto col-12 col-sm-12 col-md-8 col-lg-8 p-3 ">
+      <div class="techschool-inner-div p-0">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags }}">
+          <p style="font-size: 14px; font-weight: 800; color: white !important;">{{ message }}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+
+        <h1 class="bold-text white"><b>
+            Learn without limits</b></h1>
+        <p class="mt-4 mb-3 white">Unrestrained learning at your own pace from the comfort of your home or workspace
+        </p>
+        <div style="width: 100%;  padding: 0%;" class="mt-4 p-0 text-center">
+          <a class=" default-btn medium-btn" href="#"> Start Learning </a>
+          <!-- <a class="ml-1 button no-outline-button" href="#">View Curriculum</a> -->
+        </div>
+      </div>
+    </div>
+    <!-- <div class="test-div col-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="header-row-img-div">
+        <img class="img-two" style="width: 100%; height: 100%; object-fit: cover;"
+          src="{% static 'my_app/images/collage-dark.jpg' %}">
+        <img class="img-one" style="width: 100%; height: 100%; object-fit: cover;"
+          src="{% static 'my_app/images/collage-white.jpg' %}">
+
+      </div>
+    </div> -->
+
+
+
+
+  </div>
+
+</div>
+
+
+<div class="container" style="margin-top: 100px;">
+  <div class="row">
+    <div class="col-10 col-sm-10 col-md-4 col-lg-4 m-auto p-4 left-border">
+      <div>
+        <p class="sub-head"><b class="sub-head">TRENDING SKILLSETS</b></p>
+        <h3 style="font-size: 27px; font-weight: bolder; "><b style="font-size: 27px; font-weight: bolder;"> Reputable
+            courses for you</b></h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, quasi nihil quae quia rem enim molestias
+          inventore officia excepturi quasi nihil quae quia rem enim molestias inventore officia excepturi
+          quasi nihil quae quia rem enim molestias inventore officia excepturi quibusdam.</p>
+      </div>
+      <div style="margin-top: 30px;"><a class="button outline-button mt-4" href="">View All Courses</a></div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 text-center">
+      <div class="row m-auto">
+        <div style="margin-bottom: 20px !important; margin-top: 20px;"
+          class="col-12 col-sm-12 col-md-5 col-lg-5  rounded m-auto  ">
+          <a href="#"><img class="course-images translate-y"
+              src="{% static 'my_app/images/blockchain-course.jpg' %}"></a>
+        </div>
+        <div style="margin-bottom: 20px !important; margin-top: 20px;"
+          class="col-12 col-sm-12 col-md-5 col-lg-5  rounded m-auto ">
+          <a href="#"><img class="course-images translate-y"
+              src="{% static 'my_app/images/fullstack-course.jpg' %}"></a>
+        </div>
+        <div style="margin-bottom: 20px !important; margin-top: 20px;"
+          class="col-12 col-sm-12 col-md-5 col-lg-5  rounded m-auto ">
+          <a href="#"><img class="course-images translate-y"
+              src="{% static 'my_app/images/digital-marketing.jpg' %}"></a>
+        </div>
+        <div style="margin-bottom: 20px !important; margin-top: 20px;"
+          class="col-12 col-sm-12 col-md-5 col-lg-5  rounded m-auto ">
+          <a href="#"><img class="course-images translate-y"
+              src="{% static 'my_app/images/business-branding.jpg' %}"></a>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- 
+<div class="container">
+  <div class="svg" style="border: 2px solid red;">
+    <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+      <rect x="0" y="0" width="900" height="600" fill="#3c43ad"></rect>
+      <g transform="translate(409.61942109926224 300.9335056418322)">
+        <path id="blob0"
+          d="M173 -152.7C223 -123 261.5 -61.5 249.1 -12.4C236.8 36.8 173.5 73.5 123.5 109C73.5 144.5 36.8 178.8 -3.9 182.7C-44.5 186.5 -89.1 160.1 -114.1 124.6C-139.1 89.1 -144.6 44.5 -155.4 -10.8C-166.2 -66.2 -182.5 -132.5 -157.5 -162.1C-132.5 -191.8 -66.2 -184.9 -2.4 -182.5C61.5 -180.2 123 -182.4 173 -152.7"
+          fill="#0d0f34"></path>
+      </g>
+      <g transform="translate(493.10905011450706 308.70556986347754)" style="visibility:hidden;">
+        <path id="blob1"
+          d="M110.8 -134.3C135.8 -85.8 142.9 -42.9 147 4.1C151.2 51.1 152.3 102.3 127.3 149.8C102.3 197.3 51.1 241.1 4.4 236.8C-42.4 232.4 -84.9 179.9 -128.4 132.4C-171.9 84.9 -216.4 42.4 -230.6 -14.1C-244.7 -70.7 -228.4 -141.4 -184.9 -189.9C-141.4 -238.4 -70.7 -264.7 -13.9 -250.8C42.9 -236.9 85.8 -182.8 110.8 -134.3"
+          fill="#0d0f34"></path>
+      </g>
+    </svg>
+
+  </div>
+  <div class="content" style="border: 2px solid blue;">
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, dignissimos?</h4>
+    <p> Hello Blob</p>
+  </div>
+</div> -->
+
+<div class="svg-curve   m-0">
+  <div class="curve-upper">
+
+    <svg style="display: block; padding: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+      <path fill="#3c43ad" fill-opacity="1"
+        d="M0,96L60,117.3C120,139,240,181,360,181.3C480,181,600,139,720,106.7C840,75,960,53,1080,42.7C1200,32,1320,32,1380,32L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+  <div class="row   mt-4 p-4">
+    <div class="col-12 col-sm-12 col-md-9 col-lg-9 m-auto pt-4 pb-2">
+      <h2 class="text-center white bold-text"><b>Robust Tech stacks all for you</b></h2>
+
+    </div>
+  </div>
+  <div class="row  pt-2 pb-4">
+    <div class="col-8 m-auto">
+      <div class="m-auto text-center ">
+
+        <i style="color: rgb(211, 195, 195);" class="fab fa-html5 m-auto fa-5x m-2 p-2"></i>
+        <i style="color: rgb(211, 195, 195);" class="fab fa-css3 m-auto fa-5x m-2 p-2"></i>
+        <i style="color: rgb(211, 195, 195);" class="fab fa-js-square m-auto fa-5x m-2 p-2"></i>
+        <i style="color: rgb(211, 195, 195);" class="fab fa-python m-auto fa-5x m-2 p-2 "></i>
+        <i style="color: rgb(211, 195, 195);" class="fab fa-hive m-auto fa-5x m-2 p-2"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <svg style="display: block; padding: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+    <path class="lower-div linear" fill-opacity="1"
+      d="M0,96L60,117.3C120,139,240,181,360,181.3C480,181,600,139,720,106.7C840,75,960,53,1080,42.7C1200,32,1320,32,1380,32L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+    </path>
+  </svg>
+
+</div>
+
+
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-10 col-sm-10 col-md-7 col-lg-7 m-auto full-width-div">
+      <h3 class="darktext"><b>Learn Fullstack Web Development </b></h3>
+      <hr class="text-left mb-4 hr-prop" style="size: 20%; color: white !important; width: 10%; ">
+      <p class="darktext">Develop client and server side web applications from scratch to finish using awesome tech
+        stacks. This course will take you by the hand while building from the front end to the backend down to the stage
+        of deploying your web applications
+      </p>
+      <div style="margin-top: 50px;">
+        <a href="{% url 'learn_js' %}" class="default-btn medium-btn ">Get Started</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid " style="margin-top: 100px;">
+  <div class="row linear mt-4">
+    <div class="col-12 col-sm-12 col-md-7 col-lg-7 mx-0 bg-light p-0">
+      <img style="width: 100%; height: 100%;" src="{% static 'my_app/images/crypto.jpg' %}">
+    </div>
+    <div class="col-12 col-sm-12 col-md-5 col-lg-5  my-auto ">
+      <div class=" p-4">
+        <div>
+          <h3 class="white"><b>Master Blockchain Technology</b></h3>
+          <p class="white">Blockchain technology is no doubt one of the most paying skills you can have in this time and
+            age. Dont fret. We will show you how by taking you from the very basics to the point of becoming a master in
+            blockchain technology</p>
+
+        </div>
+        <div style="margin-top: 40px;">
+          <a href="#" class="default-btn medium-btn">Start a Course</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+<div style="margin-top: 100px;">
+
+</div>
+<div class="container p-4 rounded">
+  <div class="row">
+    <div style="margin-bottom: 60px;" class="col-11 col-sm-11 col-md-6 col-lg-6 m-auto mb-4 mt-4 p-1 text-center">
+      <div style="width: 100%;">
+
+        <img style="width: 95%;" class="m-auto collage-grid-dark" style="object-fit: cover;"
+          src="{% static 'my_app/images/collage-grid-dark.jpg' %}">
+        <img style="width: 95%;" class="m-auto collage-grid-light" style="object-fit: cover;"
+          src="{% static 'my_app/images/collage-grid-light.jpg' %}">
+      </div>
+    </div>
+    <div style="margin-top: 80px !important; " class="col-11 col-sm-11 col-md-6 col-lg-6 m-auto  ">
+      <h2 class="darktext"><b>Master Business Branding</b></h2>
+      <p style="font-size: 15px; font-weight: 500;">Learn to give businesses a brand and value. Customers should know
+        what your business has to offer just by glaring at your brand. </p>
+      <div style="margin-top: 40px;">
+        <a href="#" class="button outline-button">Start a Course</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-10 col-sm-10 col-md-7 col-lg-7 m-auto " style="padding-top: 100px; padding-bottom: 100px;">
+      <h3 class="darktext"><b>Learn Web Development with Javascript</b></h3>
+      <p class="darktext">Learn Javascript for the web. Master Javascript and build standalone web applications on the
+        frontend and backend.
+      </p>
+      <div style="margin-top: 50px;">
+        <a href="{% url 'learn_js' %}" class="button outline-button">Get Started</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% endblock main-content %}
+
+
+{% block js %}
+<!-- <script>
+  const morphine = KUTE.fromTo('#blob0',{
+    path: '#blob0'}, 
+    {path: '#blob1'},
+    {repeat: 1000,
+    duration: 2000,
+    yoyo: true });
+    morphine.start();
+</script> -->
+<script src="{% static 'my_app/js/myjs.js'%}"></script>
+
+
+{% endblock js %}

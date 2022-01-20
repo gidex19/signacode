@@ -1,0 +1,180 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block header-content %}
+<div class="container header-content">
+    <div class="row mb-4">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 div-bg mb-4 pl-4">
+            <h4 class="head-text mb-1 p-2 mr-2">Everything Tech </h4>
+            <p class="text-capitalize small med-text mb-4">Stay updated and never miss out on tech trends and
+                opportunities</p>
+            <a class="button mt-4" href="#">Join The Move</a>
+            <a class="button mt-4 ml-4" href="#">Login</a>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-4 svg-div">
+            <div class="img mb-4">
+                <img src="{% static 'my_app/images/startup.svg' %}">
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock header-content %}
+
+{% block main-content %}
+<div class="container">
+    <div class="row footer rounded">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+            <div class="mt-2" style="text-align: center;">
+            <img class="icon" src="{% static 'my_app/images/file.png' %}">
+            </div>
+            <div>
+                <p class="p-purple white mt-2">
+                    Cutting Edge Software Development
+                </p>
+                <p class="post-body white pl-4 pr-4 pt-1">
+                    We leverage on the best design techniques to produce innovative software solutions for you and your business. We understand the world is changing and we keep evolving with it by using the most recent tech stacks to create mindblowing applications
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+            <div class="mt-2" style="text-align: center;">
+                <img class="icon" src="{% static 'my_app/images/qr-code.png' %}">
+            </div>
+            <div>
+                <p class="p-purple mt-2">
+                    Business Branding
+                </p>
+                <p class="post-body white pl-4 pr-4 pt-1">
+                Here at Signacode, We intertwine branding and technology. We help our clients build a dogged business identity and customer experience. Our branding packages will give your brand a clear way to own the market
+                </p>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+            <div class="mt-2" style="text-align: center;">
+                <img class="icon" src="{% static 'my_app/images/computer.png' %}">
+            </div>
+            <div>
+                <p class="p-purple white mt-2">
+                    Tech Tutors
+                </p>
+                <p class="post-body white pl-4 pr-4 pt-1">
+                Get equipped with undeniable skills of the century by enrolling for any of our classes handled by top experts. We offer classes in Blockchain, Programming and Software Development, Graphics and UI/UX Designs, Branding and a few others
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-0">
+        {% for news in technews %}
+
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mt-3 d-flex align-items-stretch">
+            <div class="card mt-4 mb-4 " style="width: 100%;">
+                <img class="card-img-top" src="{{news.image_url}}" alt="Card image cap">
+                <div class="card-body">
+                    <h6 class="card-title post-heading">{{news.title}}</h6>
+                    <!-- <p class="card-text post-body">{{news.content}}</p> -->
+
+                </div>
+                <div style="text-align: center;">
+                    <a href="{% url 'technews-detail' news.id %}" class="btn btn-sm btn-outline-secondary mb-2">Read More...</a>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+
+    <div class="row mt-2 mb-2">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 latest-articles">
+            <p class="p-heading">LATEST ARTICLES</p>
+            <div class="container">
+                <div class="row bg-light mt-4 rounded">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="img-fluid" src="{% static 'my_app/images/code.jpg' %}">
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <div class="post-text-div">
+                            <p class="mt-2 post-heading"> Post title goes here | <span
+                                    class="badge badge-secondary">Tech</span></p>
+                            <p class="post-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+                                accusamus, alias illo fuga consequuntur, doloribus magni voluptates ducimus deserunt
+                                incidunt cum dolorum molestias numquam reiciendis quisquam adipisci quaerat aperiam
+                                facere.</p>
+                            <small class="text-muted">09 Nov, 2021</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bg-light mt-4">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="post-img" src="{% static 'my_app/images/code.jpg' %}">
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <div class="post-text-div">
+                            <p class="mt-2 post-heading"> Post title goes here | <span
+                                    class="badge badge-secondary">Tech</span></p>
+                            <p class="post-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+                                accusamus, alias illo fuga consequuntur, doloribus magni voluptates ducimus deserunt
+                                incidunt cum dolorum molestias numquam reiciendis quisquam adipisci quaerat aperiam
+                                facere.</p>
+                            <small class="text-muted">09 Nov, 2021</small>
+                        </div>
+                    </div>
+                </div>
+
+                {% for post in posts %}
+
+                <div class="row bg-light mt-4">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="post-img" src="{% static 'my_app/images/code.jpg' %}">
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <div class="post-text-div">
+                            <p class="mt-2 post-heading"> {{ post.title}} | <span
+                                    class="badge badge-secondary">{{post.title_tag}}</span></p>
+                                    <small class="text-muted">{{post.post_date}}</small>
+                                    <p class="post-body">{{post.body|truncatewords:20|safe}}</p>
+                                <a href="{% url 'post-detail' post.id %}" class="btn btn-sm btn-outline-secondary mb-2 mt-2">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+            </div>
+
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div>
+                <p class="p-heading">HOT TECH NEWS</p>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'my_app/images/code.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title post-heading">Post Title stays here</h5>
+                        <p class="card-text post-body">Some quick example text to build on the card title and make up
+                            the bulk of the card's content.</p>
+                        <a href="#" class="button-mini ">Read More...</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock main-content %}
+
+{% block js %}
+<script src="{% static 'my_app/js/myjs.js'%}"></script>
+
+{% endblock js %}

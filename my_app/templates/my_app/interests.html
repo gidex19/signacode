@@ -3,11 +3,11 @@
 {% load crispy_forms_tags %}
 
 {% block main-content %}
-<div   class="container top-space-large  ">
+<div class="container top-space-large  ">
     <div class="row">
         <div class="col-xs-10 col-sm-10 col-md-5 col-lg-5 light-bg rounded m-auto">
             <!-- <button  type="button" class="small btn btn-info" id="testbtn" href="#" data-toggle="modal" data-target="#exampleModal">testbtn</button> -->
-           
+
             <form method="POST" class="p-4">
                 <p class="small  text-capitalize">Select your interests for streamlined contents</p>
                 {% csrf_token %}
@@ -26,7 +26,8 @@
                 <button class="button-mini text-capitalize text-center mb-2 mt-4" type="submit">Submit</button>
                 <div class="text-left">
 
-                    <a style="text-decoration: none;" class="small ml-1 mr-4" href="{% url 'signup' %}">Return to Homepage</a>
+                    <a style="text-decoration: none;" class="small ml-1 mr-4" href="{% url 'signup' %}">Return to
+                        Homepage</a>
                     <a style="text-decoration: none;" class="small ml-2" href="#">View profile</a>
                 </div>
         </div>
@@ -42,18 +43,30 @@
 {% endblock main-content %}
 
 {% block js %}
-<!-- <script src="{% static 'my_app/js/test.js'%}">
 
-</script> -->
-<!-- <script>
-
-        {% if x == True %}
-        $("#exampleModal").modal('show');
-        {% endif %}
-    
-</script> -->
 <script src="{% static 'my_app/js/myjs.js'%}"></script>
+<script>
+    var dict = {
+        Anambra:['Awka', 'Ihiala', 'Okija', 'Onitsha']
+    }
+    var newOptions = ['new item 1', 'new item 2', 'new item 3', 'new item 4', 'new item 5', 'new item 6']
+    var sl = document.getElementById('inputlocation');
+    var slearn = document.getElementById('inputlearn');
+    sl.addEventListener('change', function () {
+        // console.log(slearn.options.remove(0));
+        var selected_option = dict[this.value]
+        console(selected_option)
+        while (slearn.options.length > 0) {
+            slearn.options.remove(0)
+        }
+        Array.from(newOptions).forEach(function (e) {
+            let option = new Option(e, e)
+            slearn.appendChild(option)
 
+        })
+    })
+
+</script>
 {% endblock js %}
 
 

@@ -9,7 +9,12 @@ software_list = plan_type = [('Web Application','Web Application'), ('Mobile App
 learn_list =  [('Programming','Programming'), ('Graphics Design','Graphics Design'), ('Animation','Animation'),
                              ('Cryptocurrency','Cryptocurrency'), ('Business Branding','Business Branding'),
                              ('HTML and CSS','HTML and CSS'), ('Python','Python'), ('Javascript','Javascript')]
-
+DEMO_CHOICES =(
+    ("1", "Naveen"),
+    ("2", "Pranav"),
+    ("3", "Isha"),
+    ("4", "Saloni"),
+)
 category_list = [('Personal Project','Personal Project'), ('Business Project','Business Project'), ('Academic/School Project','Academic/School Project'),
                  ('Research Project','Research Project'), ('Others','Others')]
 states_list = (("Abia", "Abia"), ("Adamawa", "Adamawa"), ("Anambra","Anambra"), ("Akwa Ibom", "Akwa Ibom"), ("Bauchi", "Bauchi"),
@@ -30,6 +35,17 @@ class MtoMForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['Interests'].widget.attrs.update({'class': ' i-field'})
+class IForm(ModelForm):
+    class Meta:
+        model = Interest
+        fields = ('my_field',)
+        widgets = {
+            # 'description': forms.Textarea(attrs={'cols':30, 'rows': 10}),
+            'Interests': forms.CheckboxSelectMultiple,
+        }
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['my_field'].widget.attrs.update({'class': ' i-field'})
 
 class ContactForm(forms.Form):
     full_name = forms.CharField(
@@ -57,12 +73,12 @@ class ContactForm(forms.Form):
             choices=category_list), label="")
 class InterestForm(forms.Form):
     location = forms.CharField(
-        widget=forms.Select(attrs={'placeholder': 'Select Location', 'class': 'form-control mb-4', 'id': 'inputUsername'},
+        widget=forms.Select(attrs={'placeholder': 'Select Location', 'class': 'form-control mb-4 inputfield', 'id': 'inputlocation'},
                             choices=states_list), label="Select Your Location")
     learn =  forms.CharField(
-        widget=forms.Select(attrs={'placeholder': 'Select your Interests', 'class': 'form-control mb-4', 'id': 'inputUsername'},
+        widget=forms.Select(attrs={'placeholder': 'Select your Interests', 'class': 'form-control mb-4 inputfield', 'id': 'inputlearn'},
                             choices=learn_list), label="Select Your Interest")
-
+    # geeks_field = forms.MultipleChoiceField( choices = DEMO_CHOICES)
 
 class LoginForm(forms.Form):
     email_address = forms.CharField(

@@ -78,7 +78,7 @@ body{
     box-shadow: 0px 8px 15px var(--boxshadowColor);
     box-sizing: border-box;
 } */
-#inputfield{
+#inputfield, .inputfield{
     border-radius: 30px;
     box-shadow: 0px 8px 15px var(--boxshadowColor);
     padding: 11px;
@@ -363,6 +363,10 @@ hr .new1 {
     margin: auto;
 
 }
+#videoPlayer{
+    height: 400px;
+    width: 100%;
+}
 .toggler-color{
     color: #3c43ad   !important;
     border: none;
@@ -447,7 +451,7 @@ hr .new1 {
 .button-p-dark:hover, .button-p-white:hover{
     text-decoration: none;
 }
-.modal-button{
+/* .modal-button{
     padding: 10px 20px;
     border: 2px solid rgb(81, 130, 221);
     background-color: cornflowerblue;
@@ -457,7 +461,7 @@ hr .new1 {
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-}
+} */
 
 
 .sub-head{
@@ -501,7 +505,9 @@ hr .new1 {
 
 /* latest ends here */
 
-
+.slick-prev:before, .slick-next:before{
+    color:#3c43ad !important;
+}
 
 nav{
     height:90px;
@@ -903,6 +909,9 @@ background-color: #3c43ad;
     text-transform: capitalize;
     color: var(--darktext) !important;
 }
+.boxshadow{
+    box-shadow: 0px 8px 15px var(--boxshadowColor);
+}
 .card{
     background-color: var(--postbg) !important;
     box-shadow: 0px 8px 15px var(--boxshadowColor);
@@ -928,6 +937,9 @@ h3{
 
 .white{
     color: white !important;
+}
+.black{
+    color: black !important;
 }
 /* profile css styling starts here */
 .profile-container{
@@ -1056,6 +1068,10 @@ h3{
 
 /* foorter css ends here  */
 @media all and (max-width: 380px){
+    #videoPlayer{
+        height: 300px;
+        width: 100%;
+    }
     .techschool-header{
         height: 90vh;
     }
@@ -1204,6 +1220,10 @@ h3{
 
 @media (min-width:381px) and (max-width: 500px) {
     /* new css here */
+    #videoPlayer{
+        height: 370px;
+        width: 100%;
+    }
 
     .techschool-header{
         height: 100vh;

@@ -14,41 +14,22 @@
     <div class="m-auto col-12 col-sm-12 col-md-9 col-lg-8 ">
       <div class="m-auto" >
         
-        <h1 class="header-text text-center"><b>HTML and CSS</b></h1>
-        <p class="mt-4 mb-3 text-center p-3"> Hypertext Markup Language(HTML) is a markup language used to give structure and add Contents
+        <h1 class="header-text text-center white"><b>HTML and CSS</b></h1>
+        <p class="mt-4 mb-3 text-center p-3 white"> Hypertext Markup Language(HTML) is a markup language used to give structure and add Contents
             to webpages. While Cascading Style Sheets(CSS) is a style sheet language used to add styles and designs to the webpage designed 
             by HTML.</p>
         <div style="padding-top: 30px; " class="m-auto text-center">
-          {% if user.js_paid == True %}
+          {% if user.hc_paid == True %}
           <a class=" default-btn medium-btn" href="#main-div">Start Course</a>
           {% else %}
-          <p class="small-and-bold mb-4">pay N10,000 to get started with this course </p>
-          <a class=" default-btn medium-btn" href="{% url 'subscribe_js' %}">Pay For Course</a>
+          <!-- <p class="small-and-bold mb-4">pay N10,000 to get started with this course </p> -->
+          <a class=" default-btn medium-btn" href="{% url 'subscribe_hc' %}">Pay For Course</a>
           {% endif %}
           
         </div>
       </div>
     </div>
-    <!-- <div class="col-12 col-sm-12 col-md-11 col-lg-6 p-4">
-      <div class="right-header-div">
-        <h2 class="header-text"><b>What you will learn</b></h2>
-        <ul class="disc-ul">
-          <li>
-            <p>Utilize modules for code organization</p>
-          </li>
-          <li>
-            <p>Understand communication and browser integration</p>
-          </li>
-          <li>
-            <p>Demonstrate asynchronous programming techniques</p>
-          </li>
-          <li>
-            <p>Employ classes for code organization</p>
-          </li>
-           
-        </ul>
-      </div>
-    </div> -->
+    
   </div>
 
 </div>
@@ -66,7 +47,7 @@
         <div class="custom-center">
           <h5 class="text-center white"><b>Course Requirements</b></h5>
           <ul class="disc-ul">
-            <li class="white">Basic knowledge of HTML and CSS</li>
+            <li class="white">No Prior knowledge of programming is required</li>
             <li class="white">A good working personal computer</li>
             <li class="white">Access to Good Internet Connection</li>
             <!-- <li class="white">Lorem ipsum dolor sit amet consectetur adipisicing.</li> -->
@@ -80,16 +61,19 @@
       <h2 class="header-text"><b>What you will learn</b></h2>
         <ul class="disc-ul">
           <li>
-            <p>Utilize modules for code organization</p>
+            <p>Fundamentals of the web</p>
           </li>
           <li>
-            <p>Understand communication and browser integration</p>
+            <p>HTML for building web pages</p>
           </li>
           <li>
-            <p>Demonstrate asynchronous programming techniques</p>
+            <p>CSS for styling</p>
           </li>
           <li>
-            <p>Employ classes for code organization</p>
+            <p>leveraging images for the web</p>
+          </li>
+          <li>
+            <p>Hands on projects</p>
           </li>
            
         </ul>
@@ -104,7 +88,7 @@
 <div class="container" id="main-div">
   <div class="row " >
     
-    {% for course in js_courses %}
+    {% for course in hc_courses %}
     <div class="col-xs-5 col-sm-6 col-md-6 col-lg-3 mt-0 d-flex align-items-stretch">
       
         <div class="vidcard card mt-4 mb-4 " style="margin: auto;">
@@ -164,10 +148,10 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                {% if request.user.js_paid == True %}
+                {% if request.user.hc_paid == True %}
                 <a href="{% url 'learn_js_detail' course.id %}" type="button" class="btn btn-primary">Get Started</a>
                 {% else %}
-                <a href="{% url 'subscribe_js'  %}" type="button" class="btn btn-primary">Pay For Course</a>
+                <a href="{% url 'subscribe_hc'  %}" type="button" class="btn btn-primary">Pay For Course</a>
               
                 {% endif %}
               </div>

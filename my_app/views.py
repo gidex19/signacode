@@ -1,3 +1,4 @@
+from turtle import title
 from unicodedata import name
 from django.http import request
 from django.http.response import HttpResponse, JsonResponse
@@ -15,8 +16,8 @@ import json
 import requests
 from django.views.generic import View
 from django.contrib.auth.hashers import *
-from .forms import LoginForm, SignUpForm, ContactForm, InterestForm, MtoMForm
-from .models import Customuser, Learn_Blockchain, Learn_Js, Learn_Python, Post, Technews, Payment, Learn_Fullstack, Learn_Techbusiness, Html_And_Css
+from .forms import LoginForm, SignUpForm, ContactForm, InterestForm, MtoMForm, IForm
+from .models import Customuser, Learn_Blockchain, Learn_Js, Learn_Python, Post, Technews, ProjectDetail, Payment, Learn_Fullstack, Learn_Techbusiness, Html_And_Css
 from signacode.settings import psk, ppk
 paystack_secret_key = psk
 paystack_public_key = ppk 
@@ -33,12 +34,40 @@ class AjaxHandlerView(View):
             return JsonResponse({'seconds':'my data recieved' })
         return render(request, 'my_app/test.html')
 
-def home(request, filled=None):
+def ajax_home(request, filled=None):
     posts = Post.objects.all()
     technews = Technews.objects.all()[:4]
     context = {'posts':posts, 'technews': technews, 'filled': filled}
-    return render(request, 'my_app/home.html', context )
+    text = request.GET.get('button_text')
+    print(text)
+    if request.is_ajax():
+        if request.user.is_authenticated:
+            user = request.user
+            if user.interest_filled == False:
+                return JsonResponse({'seconds':'user is logged in but has not filled the interest form' })
+            else:
+                return JsonResponse({'seconds':'user is logged in but has already filled the interest form' })
+        else:
+            if request.is_ajax():
+                return JsonResponse({'seconds':'user is not logged in' })
+    return render(request, 'my_app/ajax_home.html', context )
 
+def home(request):
+    posts = Post.objects.all()
+    technews = Technews.objects.all()[:8]
+    context = {'posts':posts, 'technews': technews}
+    text = request.GET.get('button_text')
+    print(text)
+    if request.is_ajax():
+        if request.user.is_authenticated:
+            user = request.user
+            if user.interest_filled == False:
+                return JsonResponse({'status':'User interests not filled'})
+        else:
+            if request.is_ajax():
+                return JsonResponse({'status':'User not logged in' })
+
+    return render(request, 'my_app/home.html', context )
 
 
 
@@ -317,6 +346,12 @@ def learn_blockchain(request):
 def learn_fullstack(request):
     return render(request, 'my_app/learn_fullstack.html')
 
+def learn_branding(request):
+    branding_courses = Learn_Techbusiness.objects.all()
+    first_course = Learn_Techbusiness.objects.first()
+    context = {'branding_courses': branding_courses, 'first_course': first_course}
+    return render(request, 'my_app/learn_branding.html', context)
+
 
 @login_required
 def learn_js_detail(request, pk):
@@ -444,6 +479,21 @@ def test(request, course, pk):
 
 
 def ace(request):
+    
+    #response = requests.get("http://api.open-notify.org/astros.json")
+    response = requests.get("https://newsapi.org/v2/everything?q=keyword&apiKey=5cfc4aeaa97d4e58a66e5d19bcc1953a")
+    data = response.text
+    datas = json.loads(data)
+    articles_list = datas['articles']
+    # print(articles_list)
+    for article in articles_list:
+        print(article['title'])
+        print(article['description'])
+        print(article['content'])
+        print(article['urlToImage'])
+        Technews.objects.create(title=article['title'], content=article['content'], image_url = article['urlToImage'] )
+        print("=====================saved to the database===========================")
+
     course = Learn_Js.objects.last()
     return render(request, 'my_app/ace.html', {'course': course })
 
@@ -463,13 +513,8 @@ def loginpage(request):
                     messages.success(request, f'Hello {custom_user.full_name} \n, You have been logged in successfully...would you love to fill in your interests?')
                     #print('user has been logged in')
                     
-                    if custom_user.interest_filled:
-                        print("user has filled his interest details")
-                        return redirect('homepage', filled=True)
-                    else:
-                        print("user has not filled his interests detailed")
-                        return redirect('homepage', filled=False)
-                    return redirect('interests')
+                    
+                    return redirect('homepage')
                 elif custom_user is None:
                     #print('message section')
                     messages.warning(request, 'Incorrect email address or password')
@@ -481,18 +526,50 @@ def loginpage(request):
     return render(request, 'my_app/login.html', {'form': form})
 
 def interests(request):
-    form = InterestForm()
-    mform = MtoMForm()
-    context = {'form':form, 'mform':mform}
+    if request.method=='POST':
+        form = InterestForm(request.POST)
+        mform = IForm(request.POST)
+        context = {'form':form, 'mform':mform}
+        if form.is_valid():    
+            item1 = form.cleaned_data.get('location')
+            data = form.cleaned_data.get('')
+            # m_data = mform.cleaned_data['my_field']
+            print("form is valid")
+            print(item1)
+            # print(m_data)
+    else:
+        form = InterestForm()
+        mform = MtoMForm()
+        context = {'form':form, 'mform':mform}
+        print("form is not valid")    
+        return render(request, 'my_app/interests.html', context)
     return render(request, 'my_app/interests.html', context)
-
+    
 def modal(request):
     return render(request, 'my_app/modal.html')
 
 def services(request):
-    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            full_name = form.cleaned_data.get('full_name')
+            email = form.cleaned_data.get('email')
+            phone = form.cleaned_data.get('phone_number')
+            details = form.cleaned_data.get('details')
+            software_type = form.cleaned_data.get('software_type')
+            category = form.cleaned_data.get('category')
+            ProjectDetail.objects.create(full_name = full_name, email = email, phone = phone,
+             details = details, software_type = software_type, category = category )
+            messages.success(request, 'Thank You!!! \nYour message has been recieved. \nWe will get back to you shortly')
+            print('form submitted')
+            
+            return redirect('homepage')
+
+    else:
+        form = ContactForm()
 
     return render(request, 'my_app/services.html', {'form': form})
+
 
 def logout_view(request):
     logout(request)

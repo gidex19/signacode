@@ -14,15 +14,16 @@
     <div class="m-auto col-12 col-sm-12 col-md-9 col-lg-8 ">
       <div class="m-auto" >
         
-        <h1 class="header-text text-center white"><b>Blockchain Mastercourse</b></h1>
-        <p class="mt-4 mb-3 text-center p-3 white"> Learn blockchain technology at your own pace. Cryptocurrency is the future currency for trading and making transactions. Blockchain is already
-            growing into every space. Trust me, you dont want to be left out </p>
+        <h1 class="header-text text-center white"><b>Business Branding Mastercourse</b></h1>
+        <p class="mt-4 mb-3 text-center p-3 white"> With business branding you can decide what impression registers in the mind 
+            of your potential customers whenever they come across your brand. This course offers a comprehensive guide to mastering business branding 
+        </p>
         <div style="padding-top: 30px; " class="m-auto text-center">
-          {% if user.hc_paid == True %}
+          {% if user.business_paid == True %}
           <a class=" default-btn medium-btn" href="#main-div">Start Course</a>
           {% else %}
           <!-- <p class="small-and-bold mb-4">pay N10,000 to get started with this course </p> -->
-          <a class=" default-btn medium-btn" href="{% url 'subscribe_blockchain' %}">Pay For Course</a>
+          <a class=" default-btn medium-btn" href="{% url 'subscribe_business' %}">Pay For Course</a>
           {% endif %}
           
         </div>
@@ -60,17 +61,15 @@
       <h2 class="header-text"><b>What you will learn</b></h2>
         <ul class="disc-ul">
           <li>
-            <p>Fundamentals of Blockchain</p>
+            <p>Fundamentals of Branding</p>
           </li>
           <li>
-            <p>How to become a master in crypto trading</p>
+            <p>Upscaling product value via branding</p>
           </li>
           <li>
-            <p>DEFI and Technical Analysis</p>
+            <p>Modern Designs and Impressions</p>
           </li>
-          <li>
-            <p>Fundamental and Financial Analysis</p>
-          </li>
+          
           <!-- <li>
             <p>leveraging images for the web</p>
           </li> -->
@@ -90,7 +89,7 @@
 <div class="container" id="main-div">
   <div class="row " >
     
-    {% for course in blockchain_courses %}
+    {% for course in branding_courses %}
     <div class="col-xs-5 col-sm-6 col-md-6 col-lg-3 mt-0 d-flex align-items-stretch">
       
         <div class="vidcard card mt-4 mb-4 " style="margin: auto;">
@@ -100,7 +99,7 @@
               
           <a class="course-anchor" data-toggle="modal" data-target="#course-{{course.id}}" role="button" >  
           <p style="margin: 0;" class="card-title course-title ">
-             <span>{% if user.blockchain_paid%}<i class="fas fa-lock-open fa-1x"></i>
+             <span>{% if user.business_paid%}<i class="fas fa-lock-open fa-1x"></i>
             {%else%}<i class="fas fa-lock fa-1x"></i></span>{% endif %}  {{ course.title }}</p>
           </a>
           <span class="fa fa-star checked"></span>
@@ -150,10 +149,12 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                {% if request.user.js_paid == True %}
-                <a href="{% url 'learn_js_detail' course.id %}" type="button" class="btn btn-primary">Get Started</a>
+                {% if request.user.business_paid == True %}
+                <!-- <a href="{% url 'learn_js_detail' course.id %}" type="button" class="btn btn-primary">Get Started</a> -->
+                <a href="#" type="button" class="btn btn-primary">Get Started</a>
                 {% else %}
-                <a href="{% url 'subscribe_blockchain'  %}" type="button" class="btn btn-primary">Pay For Course</a>
+                <!-- <a href="{% url 'subscribe_blockchain'  %}" type="button" class="btn btn-primary">Pay For Course</a> -->
+                <a href="#" type="button" class="btn btn-primary">Pay For Course</a>
               
                 {% endif %}
               </div>

@@ -1,20 +1,42 @@
+from email.policy import default
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.db.models.fields.related import ForeignKey, ManyToManyField
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from multiselectfield import MultiSelectField
 from PIL import Image
 from .validators import image_validator
 
 # Create your models here.
-
+software_list = (('Web Application','Web Application'), ('Mobile Application','Mobile Application'), ('Desktop Application','Desktop Application'),
+                             ('Chatbot','Chatbot'), ('Web Crawler','Web Crawler'), ('Others','Others'))
+category_list =  (('Personal Project','Personal Project'), ('Business Project','Business Project'), ('Academic/School Project','Academic/School Project'),
+                 ('Research Project','Research Project'), ('Others','Others'))
 plan_type = (('Learn Js','Learn Js'), ('Learn Python','Learn Python'), ('Digital Marketing','Digital Marketing'), ('Blockchain','Blockchain'))
+MY_CHOICES = (('item_key1', 'Item title 1.1'),
+              ('item_key2', 'Item title 1.2'),
+              ('item_key3', 'Item title 1.3'),
+              ('item_key4', 'Item title 1.4'),
+              ('item_key5', 'Item title 1.5'))
 
 class Interest(models.Model):
     title = models.CharField(max_length=30, blank=False, default='None' )
-
+    my_field = MultiSelectField(choices=MY_CHOICES, default='None')
     def __str__(self):
         return self.title
+
+class ProjectDetail(models.Model):
+    full_name = models.CharField(max_length=30, blank=True )
+    email = models.CharField(max_length=30, blank=True )
+    phone = models.CharField(max_length=30, blank=True )
+    software_type = models.CharField(max_length=30, blank=False, choices= software_list)
+    category = models.CharField(max_length=30, blank=False, choices= category_list)
+    details = models.TextField(max_length=2000, blank=True)
+    date_receieved = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.software_type + ' || ' + self.category
 
 
 class Customuser(AbstractUser):
@@ -37,6 +59,7 @@ class Customuser(AbstractUser):
     blockchain_level = models.IntegerField(default=1, null=False)
     business_level = models.IntegerField(default=1, null=False)
     
+    
     def __str__(self):
         return ('User: {} \n email: {}'.format(self.full_name, self.email))
 
@@ -46,7 +69,7 @@ class Customuser(AbstractUser):
 class Technews(models.Model):
     title = models.CharField(max_length = 100, blank= True)
     content = models.TextField() 
-    image_url = models.CharField(max_length = 255, blank= True)
+    image_url = models.CharField(max_length = 255, blank= True, null=True, default="https://media.istockphoto.com/photos/selective-focus-of-stacking-magazine-place-on-table-in-living-room-picture-id813136942?k=20&m=813136942&s=612x612&w=0&h=K9YYeYSORn8pz__9admNT1gI5paHSCwylAe7w4vL2D4=")
 
     def __str__(self):
         return ('Id: {} : Title: {}'.format(self.id, self.title))
